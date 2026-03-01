@@ -1,0 +1,410 @@
+SIDHANT CHANDAN PANDE
+Full Stack Developer  ·  National Athlete  ·  Published Author  ·  Content Creator
+CS Student — Vedam School of Technology  |  2nd Semester
+✉ Sidhantpande222@gmail.com   
+⭐ github.com/Sidhant185   
+💼 linkedin.com/in/sidhantpande   
+📸 @lifeatvedam
+🟢 Open to Freelance
+🎓 Open to Internships
+🤝 Open to Collabs
+🌍 1.1M+ Google Views
+My Mission
+I build digital products that solve real problems and create real impact. Whether it's a web app used by hundreds of students, a YouTube channel grown from 0 to 1,000 subscribers in 60 days, or a Google presence with 1.1 Million views — I don't just show up, I make things grow. In 3–5 years, I want to ship products that millions of people use and love.
+👋  About Me
+Sidhant Chandan Pande is not your average CS student. In just his second semester at Vedam School of Technology, he has shipped 8+ real-world web projects, earned paid freelance clients, grown a YouTube channel to 1,000 subscribers in two months, built a Google Local Guide presence with over 1.1 Million photo and video views, competed in Table Tennis at the national level, and published four books on Amazon. That is not a five-year résumé — that is his first year.
+As a developer, he works across the full stack — React, Angular, Node.js, Firebase, Python, and Django — always driven by the question: does this actually solve a real problem? As a content creator, he built @LifeAtVedam from scratch into a thriving community channel with 150+ hours of watch time and reels averaging 7,500+ reach. As a Google Local Guide, his travel reviews and photography have organically accumulated over 1.3 Million combined views.
+He brings the discipline of a national-level athlete, the voice of a published author, and the strategic thinking of a content creator to everything he builds. This is what makes him different — and this is just the beginning.
+⚡  What Makes Me Different
+🚀
+Innovative Builder
+Ships real products to real users — not tutorials or mockups.
+🏆
+Athlete Discipline
+National-level competition built a mindset that shows up and delivers under pressure.
+🎬
+Growth Mindset
+Grew a channel 0→1K in 60 days and 1.1M Google views — organically.
+📖
+Multi-Dimensional
+Developer + Athlete + Author + Creator. Rare combo. Real results.
+🎬  Digital Presence & Content Creation
+Beyond code, Sidhant has built a genuine digital footprint — with real audiences, real numbers, and real community impact across YouTube, Instagram, and Google Maps.
+📺
+1,000+
+YouTube Subscribers
+⏱️
+150 hrs+
+Watch Time
+📸
+7,500+
+Avg Reel Reach
+🗺️
+1.1M+
+Google Photo Views
+⭐
+2L+
+Google Review Views
+▶  @LifeAtVedam — YouTube Channel
+Travel · Hotels · Restaurants · College Life  |  0 → 1,000 subscribers in 2 months
+Started @LifeAtVedam as a solo project — scripting, filming, editing, and publishing content entirely on his own before scaling into a team. The channel covers travel experiences, hotel and restaurant reviews, and college life content. In just two months, it grew from zero to 1,000 subscribers and crossed 150 hours of total watch time — a milestone that reflects genuine audience trust, not paid promotion.
+What this demonstrates:
+Content strategy — knowing what to make, when to post, and how to retain viewers
+Video production — scripting, filming, editing, and publishing end-to-end as a solo creator
+Community building — growing an audience from scratch with zero initial following
+Leadership — transitioning from solo creator to managing a content team
+▶  youtube.com/@LifeAtVedam
+📸  @lifeatvedam — Instagram
+Travel · Lifestyle · Experiences  |  Average 7,500+ reach per reel
+The Instagram counterpart to the YouTube channel — covering travel, hotel stays, restaurant experiences, and lifestyle content. Each reel consistently reaches 7,500+ accounts on average, demonstrating a strong understanding of Instagram's algorithm, content hooks, and audience engagement strategy.
+Consistent 7,500+ average reach per reel — organic, algorithm-driven growth
+Short-form video strategy tailored to Instagram's discovery and engagement patterns
+Visual storytelling across travel, food, and lifestyle verticals
+📸  instagram.com/lifeatvedam
+🗺️  Google Local Guide
+Travel Reviews & Photography  |  1.1M+ photo & video views  ·  2L+ review views
+As a Google Local Guide, Sidhant has built one of the most impressive organic digital footprints possible — with over 1.1 Million views on photos and videos uploaded to Google Maps, and over 2 Lakh (200,000) views on written reviews. All of this was built purely through consistent, high-quality contributions across hotels, restaurants, and travel destinations.
+1.1 Million+
+Photo & Video Views
+2 Lakh+
+Review Views on Maps
+100% Organic
+No paid promotion — pure quality
+🗺️  My Journey
+School
+National Table Tennis Player + Zonal Skater
+Competed nationally in Table Tennis and zonally in skating — building the competitive mindset and discipline that underpins everything Sidhant does today.
+School
+Published First Book on Amazon
+Became a published author while still in school. Most students plan to write a book someday. Sidhant just did it.
+School
+Launched @LifeAtVedam & Became Google Local Guide
+Started creating travel and lifestyle content solo — filming, editing, and publishing everything himself while building a Google Maps presence that would eventually cross 1.1 Million views.
+2024
+Joined Vedam School of Technology — CS, Sem 1
+Started his Computer Science degree and immediately began building real projects, not just studying theory.
+2024
+8+ Real Projects Shipped
+From cultural websites to AI-powered platforms — every project live, real, and used by actual students and faculty.
+2024
+0 → 1,000 YouTube Subscribers in 2 Months
+Grew @LifeAtVedam from zero to 1,000 subscribers in 60 days and crossed 150 hours of watch time — pure organic growth.
+2024
+Won Hackathon with Study Buddy (24 hrs)
+Led a team to build a full AI-powered educational platform with Monaco editor, Gemini AI, and real-time analytics — in a single day.
+2025
+First Paid Freelance Clients
+Converted skills into income with 2 paid gigs before completing his first year of college.
+Future
+Ship Products That Impact Millions
+The mission is set. Every project, every subscriber, every line of code is building toward that goal.
+🛠️  Technical Skills
+Frontend Development
+HTML5 & CSS3
+JavaScript (ES6+)
+React.js
+Angular
+Tailwind CSS
+Responsive Design
+Vanilla JS Modules
+UI/UX Principles
+Backend & Database
+Node.js
+Firebase Firestore
+Firebase Auth
+Python
+Django
+REST APIs
+MySQL / MongoDB
+Real-time DBs
+Content & Digital Marketing
+YouTube Growth
+Instagram Reels
+Short-form Video
+Content Strategy
+Video Editing
+Community Building
+Google Maps SEO
+Brand Building
+Tools & DevOps
+GitHub / Git
+Netlify
+Monaco Editor
+Gemini AI API
+Piston API
+CI/CD Pipelines
+VS Code
+Open Source
+Currently Learning
+Angular (Advanced)
+Full Stack Architecture
+System Design
+Cloud Deployment
+💻  Projects
+Every project below is real, live, and built to solve an actual problem. Full demos, prototypes, and source code on GitHub.
+1. Study Buddy — AI-Powered Learning Ecosystem
+Built in 24 hours at a hackathon · Team project · Now a full educational platform
+Study Buddy bridges the gap between student assessment and actual improvement. It adapts to each student's learning curve using a weighted practice engine, real-time code execution, and Gemini AI evaluation. Built as a hackathon project in 24 hours, it has since grown into a fully-featured platform used at Vedam.
+⚡ Full AI pipeline built in 24 hours — code execution, AI evaluation, and adaptive learning working on day one.
+Key Features:
+Monaco Editor (VS Code-style) for in-browser Java coding
+Piston API for real-time code execution and test case validation
+Gemini 2.0 AI evaluation — analyses code, maps to curriculum, identifies weaknesses
+Smart Practice Engine with weighted algorithm based on student weakness patterns
+Vedam Merit Score tracking performance across Maths, Java, and Web Development
+Admin Panel with bulk JSON intake for mentors to manage contests
+Firebase Auth with domain-restricted SSO (@vedamsot.org)
+Historical trend analytics and AI-generated performance reports
+Tech Stack:  
+React 18
+ · 
+Vite
+ · 
+Firebase
+ · 
+Gemini AI
+ · 
+Monaco Editor
+ · 
+Piston API
+ · 
+Node.js
+⭐ GitHub
+2. Vedam Open Source — Admin Dashboard
+Enterprise-grade admin dashboard for the Vedam Open Source community
+A comprehensive admin dashboard solving a real teacher problem: tracking student open source progress, managing GitHub contributions, collecting data via forms, and viewing analytics — all in one place. Built with modular architecture, CI/CD, and security best practices.
+⚡ Enterprise-level architecture: virtual scrolling, request deduplication, exponential backoff, and automated security scanning.
+Key Features:
+Firebase Auth with Firestore-based admin management
+Member management with filtering, pagination, and virtual scrolling
+Dynamic Form Builder for multi-field data collection
+GitHub API integration with intelligent caching and rate limiting
+Real-time analytics with charts and trend tracking
+Fully accessible — ARIA labels, keyboard navigation, high contrast mode
+CI/CD via GitHub Actions — automated testing, security scanning, accessibility checks
+Netlify deployment with preview builds on every PR
+Tech Stack:  
+Vanilla JS (ES6)
+ · 
+Firebase
+ · 
+GitHub API
+ · 
+Custom CSS
+ · 
+Netlify
+ · 
+CI/CD
+⭐ GitHub
+3. Vedam Open Source — Main Website
+Public-facing platform for Vedam's open source initiative
+The main website for the Vedam Open Source initiative — designed to onboard students into open source, showcase projects, and serve as the public face of the organisation. Connected to the admin dashboard via Firebase.
+Key Features:
+Student onboarding flows for open source contribution
+Project showcase and organisation overview
+Integrated with the admin dashboard backend via Firebase
+Responsive, mobile-first design
+Tech Stack:  
+JavaScript
+ · 
+HTML & CSS
+ · 
+Firebase
+ · 
+Netlify
+⭐ GitHub
+4. College Cultural Website
+End-to-end official website for college cultural events — live and used by students
+A complete production-ready website for the college's annual cultural events. Features event listings, student registration, schedules, and announcements — actively used by students and faculty.
+⚡ Live and used by the actual college community — real users, real traffic.
+Key Features:
+Event listings and schedule management
+Student registration and form submissions
+Announcements and live updates
+Mobile-first responsive design
+Tech Stack:  
+HTML
+ · 
+CSS
+ · 
+JavaScript
+ · 
+Firebase
+5. E-Sports Platform
+Full-featured competitive gaming platform built end-to-end
+A fully functional e-sports platform covering tournament brackets, team registrations, leaderboards, and game listings. Built for competitive gaming communities who need a central hub to organise and track competitions.
+Key Features:
+Tournament bracket management and live updates
+Team registration and player profiles
+Live leaderboards and ranking system
+Match scheduling and game listings
+Tech Stack:  
+React.js
+ · 
+Node.js
+ · 
+Firebase
+6. College Tech-Fest Website
+Official website for the annual college technology festival — used by hundreds
+The official tech festival website featuring speaker highlights, event registration, countdown timers, and social sharing — used by hundreds of students during the actual festival.
+⚡ Used by hundreds of students during the actual festival.
+Key Features:
+Event and speaker showcase with rich media
+Registration forms with Firebase backend
+Live countdown timer to festival day
+Social sharing integration
+Tech Stack:  
+HTML
+ · 
+CSS
+ · 
+JavaScript
+ · 
+Firebase
+7. Code Nexus
+Developer community platform for collaboration and resources
+A developer-focused platform bringing coders together with shared resources, discussions, and collaboration spaces — designed to create a central hub for developers to learn, share, and build together.
+Key Features:
+Developer resource library with curated content
+Community discussion and collaboration spaces
+Project collaboration matching
+Developer-friendly UI
+Tech Stack:  
+React.js
+ · 
+Tailwind CSS
+ · 
+Firebase
+8. Personal AI Talking Chatbot
+Context-aware conversational AI assistant with a web interface
+A custom-built conversational AI chatbot holding natural dialogue, guiding users on tasks, and providing context-aware responses — built as a personal assistant tool with a clean web interface and NLP integration.
+Key Features:
+Natural language conversation with context awareness
+Task guidance and step-by-step assistance
+Clean web-based chat interface
+NLP API integration for intelligent responses
+Tech Stack:  
+Python
+ · 
+JavaScript
+ · 
+NLP APIs
+ · 
+Firebase
+9. Client Portfolio Website
+Paid freelance project — designed and delivered end-to-end
+A clean, professional portfolio website designed and built for a paying client — covering UI/UX design, responsive layout, and deployment. Demonstrates the ability to translate a client's vision into a polished, live product.
+⚡ Paid freelance project — delivered to a real client.
+Key Features:
+Custom UI/UX design tailored to client's personal brand
+Fully responsive across all devices
+Smooth animations and interactive elements
+Deployed and handed off to client
+Tech Stack:  
+HTML
+ · 
+CSS
+ · 
+JavaScript
+ · 
+Tailwind CSS
+💼  Freelance Services
+Here's what I can build and grow for you:
+🌐  Business Websites
+Professional, fast, mobile-ready websites for businesses, personal brands, and startups. Design to deployment — fully handled.
+📄  Landing Pages
+High-converting landing pages for products, services, events, or campaigns built to turn visitors into customers.
+⚙️  Web Applications
+Custom web apps with frontend, backend, database, and authentication — from simple tools to complex real-time platforms.
+🤖  AI Chatbots
+Custom AI-powered chatbots for websites, customer support, and personal assistants — integrated with modern NLP and AI APIs.
+🗂️  Portfolio Websites
+Clean, impactful portfolio websites for students, developers, designers, and professionals looking to stand out online.
+📱  Social Media Management
+YouTube channel growth, Instagram reel strategy, content planning, and brand building — backed by real results (0→1K subs in 60 days, 7.5K+ reel reach).
+🎬  Content Strategy & Creation
+End-to-end content creation for travel, lifestyle, and brand channels — scripting, filming guidance, editing strategy, and growth planning.
+🔓  Open Source Contributions
+Collaborative development, feature contributions, code reviews, and open source project setup for teams and communities.
+🏆  Sports Achievements
+Athletic discipline is not separate from Sidhant's identity — it is the foundation of it. The focus and pressure management built on the national table tennis circuit directly translate into how he writes code, meets deadlines, and delivers under pressure.
+🏓  Table Tennis
+National Level
+Competed at the national stage representing both school and college — one of the highest levels a student athlete can reach in India.
+National Level Sports Certificate available on request.
+⛸️  Skating
+Zonal Level
+Competed at zonal level in skating during school years — demonstrating athletic versatility and the ability to master technically demanding physical skills.
+📚  Published Books — Amazon Author
+Four books published on Amazon — two novels, two educational. Writing at this level requires clarity of thought, depth of perspective, and the discipline to finish what you start. The same qualities Sidhant brings to every product he builds.
+📖  Getting High on Intimacy
+Novel · Literary Fiction
+A deeply personal novel exploring human connection, vulnerability, and the intoxicating complexity of intimacy. For anyone who has ever felt too much or been afraid to feel at all.
+💔  Broken
+Novel · Literary Fiction
+A raw, emotionally honest novel about falling apart and what it means to put yourself back together. Resilience told without sugarcoating — for readers who want real, not polished.
+✈️  Traveler's Journey
+Educational · Self-Discovery
+An educational guide through the experience of travel — not just as movement, but as transformation. For students and young adults learning how exploration shapes perspective and growth.
+📓  Teenager's Diary
+Educational · Youth
+An educational book written for and about teenagers navigating the chaos of growing up. Relatable, honest, and genuinely useful for young readers looking for a guide through those years.
+Amazon book links to be embedded in the digital version of this portfolio.
+🎓  Certifications & Learning
+White Hat Junior
+  —  Programming & Web Development
+✓  Completed — Certificate Available
+HackerRank
+  —  Programming Skills Certification
+✓  Completed — Certificate Available
+National Sports Certificate
+  —  Table Tennis — National Level Competition
+✓  Official Certificate Available
+Google Local Guide
+  —  1.1M+ photo views · 2L+ review views on Google Maps
+✓  Active — Ongoing Contributions
+Full Stack Development
+  —  React, Angular, Node.js, Firebase, Django — project-based learning
+✓  In Progress — Actively Building
+💬  What People Say
+Real feedback from teammates, clients, and mentors. More to be added soon.
+"Building Study Buddy in 24 hours with Sidhant was insane. Most people freeze under that kind of pressure — he got more focused. By hour 18 we had a working AI evaluation pipeline. That's not normal."
+— College Teammate
+  |  Hackathon Partner — Study Buddy
+"He didn't just build what I asked for — he asked the right questions first and came back with something better than what I imagined. Delivered clean, fast, and on time."
+— Freelance Client
+  |  Portfolio Website Project
+"The admin dashboard Sidhant built genuinely solved a problem we'd been struggling with. It's professionally built — CI/CD pipelines and security scanning are not what you expect from a first-year student."
+— College Faculty
+  |  Vedam Open Source Initiative
+Real quotes will be inserted once collected from clients and collaborators.
+🌍  Beyond the Screen
+A developer who only codes is only half a person. Sidhant's interests outside tech give him the perspective, empathy, and creativity to actually connect with the people he builds for.
+✈️
+Travel
+Hotels, restaurants, new cities — every place he visits becomes content, a review, or a new perspective on how to build better products.
+📝
+Reading & Writing
+A published author of four Amazon books. Writing builds the communication and empathy that makes a developer genuinely good at understanding users.
+🎵
+Music
+Music fuels focus during long build sessions. The rhythm and structure of a great track aren't so different from clean, well-architected code.
+🎬
+Content Creation
+From scripting to filming to editing — building @LifeAtVedam taught storytelling skills that make his web products more human.
+🤝  Let's Work Together
+Whether you have a project idea, a collaboration in mind, or just want to connect — Sidhant is always open. The best products start with a conversation.
+✉️  Email
+Sidhantpande222@gmail.com
+💼  LinkedIn
+linkedin.com/in/sidhantpande
+⭐  GitHub
+github.com/Sidhant185
+📸  Instagram
+@lifeatvedam
+▶  YouTube
+youtube.com/@LifeAtVedam
+🗺️  Google Local Guide
+1.1M+ views · Travel & Lifestyle
+Sidhant Chandan Pande  ·  Developer  ·  Athlete  ·  Author  ·  Creator  ·  Innovator
+Vedam School of Technology  ·  CS 2nd Semester  ·  1.1M+ Google Views  ·  Open to Opportunities Worldwide
