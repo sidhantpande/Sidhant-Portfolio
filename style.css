@@ -73,7 +73,7 @@ body::before {
         radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.08), transparent 25%),
         radial-gradient(circle at 50% 80%, rgba(244, 114, 182, 0.05), transparent 25%);
     background-size: 200% 200%;
-    animation: liquidBackground 20s ease-in-out infinite alternate;
+    animation: liquidBackground 60s ease-in-out infinite alternate;
 }
 
 @keyframes liquidBackground {
@@ -780,44 +780,21 @@ section {
     object-fit: contain;
 }
 
-.cat-frontend .skill-tag {
-    background: rgba(56, 189, 248, .08);
-    color: var(--secondary);
-    border: 1px solid rgba(56, 189, 248, .18);
-}
-
-.cat-frontend .skill-tag:hover {
-    background: rgba(56, 189, 248, .15);
-}
-
-.cat-backend .skill-tag {
-    background: rgba(52, 211, 153, .08);
-    color: var(--green);
-    border: 1px solid rgba(52, 211, 153, .18);
-}
-
-.cat-backend .skill-tag:hover {
-    background: rgba(52, 211, 153, .15);
-}
-
-.cat-tools .skill-tag {
-    background: rgba(251, 191, 36, .08);
-    color: var(--amber);
-    border: 1px solid rgba(251, 191, 36, .18);
-}
-
-.cat-tools .skill-tag:hover {
-    background: rgba(251, 191, 36, .15);
-}
-
+.cat-frontend .skill-tag,
+.cat-backend .skill-tag,
+.cat-tools .skill-tag,
 .cat-learning .skill-tag {
-    background: rgba(244, 114, 182, .08);
-    color: var(--accent);
-    border: 1px solid rgba(244, 114, 182, .18);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    border: 1px solid var(--border);
 }
 
+.cat-frontend .skill-tag:hover,
+.cat-backend .skill-tag:hover,
+.cat-tools .skill-tag:hover,
 .cat-learning .skill-tag:hover {
-    background: rgba(244, 114, 182, .15);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--border-hover);
 }
 
 .non-tech-section {
@@ -996,21 +973,23 @@ section {
     padding: 6rem 0;
     border-top: 1px solid var(--border);
     position: relative;
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
     background: radial-gradient(circle at right center, rgba(124, 58, 237, 0.05), transparent 50%);
 }
 
 .exp-list {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    margin-top: 4rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .exp-item {
     display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 4rem;
-    padding: 3.5rem;
+    grid-template-columns: 280px 1fr;
+    gap: 2.5rem;
+    padding: 2.2rem;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.005));
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1163,6 +1142,8 @@ section {
 /* STATS */
 .stats-section {
     border-top: 1px solid var(--border);
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
 }
 
 .stats-bento {
@@ -1229,13 +1210,13 @@ section {
     color: #fff;
 }
 
-.youtube {
-    background: rgba(255, 0, 0, .04);
+.events {
+    background: rgba(251, 191, 36, .08);
 }
 
-.youtube i {
+.events i {
     font-size: 1.8rem;
-    color: #ff4444;
+    color: var(--amber);
     margin-bottom: .6rem;
 }
 
@@ -1265,6 +1246,8 @@ section {
 /* PROJECTS */
 .projects-section {
     border-top: 1px solid var(--border);
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
 }
 
 .project-category-label {
@@ -1544,6 +1527,30 @@ section {
     overflow: hidden;
 }
 
+.book-cover-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.6;
+    /* So the text overlay stays legible */
+    transition: opacity 0.5s var(--ease), transform 0.8s var(--ease);
+}
+
+.book-item:hover .book-cover-img {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.book-number,
+.book-title,
+.book-cover small {
+    position: relative;
+    z-index: 10;
+}
+
 .book-cover-1 {
     background: linear-gradient(135deg, #1e293b, #334155);
 }
@@ -1679,6 +1686,55 @@ section {
 .video-embed iframe {
     width: 100%;
     height: 100%;
+}
+
+.yt-thumb-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.yt-thumb-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s var(--ease);
+}
+
+.yt-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: #ff0000;
+    opacity: 0.8;
+    transition: all 0.3s var(--ease);
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.6));
+    z-index: 5;
+}
+
+.yt-thumb-link:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: background 0.5s var(--ease);
+}
+
+.yt-thumb-link:hover:before {
+    background: transparent;
+}
+
+.yt-thumb-link:hover img {
+    transform: scale(1.05);
+}
+
+.yt-thumb-link:hover .yt-play-btn {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .presence-info {

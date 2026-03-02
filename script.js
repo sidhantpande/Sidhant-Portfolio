@@ -115,6 +115,7 @@ function openModal(id) {
     if (!modal) return;
     modal.classList.add('active');
     modal.setAttribute('aria-hidden', 'false');
+    lenis.stop(); // 🔥 STOP smooth scroll
     document.body.style.overflow = 'hidden';
 }
 
@@ -124,6 +125,7 @@ function closeModal(id) {
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    lenis.start(); // 🔥 Restart smooth scroll
 }
 
 // Close modal on overlay click
@@ -150,3 +152,7 @@ document.addEventListener('keydown', (e) => {
 
 // ===== Refresh ScrollTrigger =====
 
+// ===== Refresh ScrollTrigger after load =====
+window.addEventListener("load", () => {
+    ScrollTrigger.refresh();
+});

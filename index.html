@@ -33,6 +33,7 @@
     <!-- Devicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
 
+    <link rel="preload" as="image" href="profile.webp">
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -96,7 +97,8 @@
                     <div class="hero-visual">
                         <div class="image-reveal-container">
                             <div class="image-inner">
-                                <img src="profile.png" alt="Sidhant Pande" class="profile-img">
+                                <img src="profile.webp" alt="Sidhant Pande" width="500" height="625" class="profile-img"
+                                    decoding="async" fetchpriority="high">
                             </div>
                             <div class="floating-stat stat-1">
                                 <i class="fas fa-code"></i>
@@ -156,8 +158,8 @@
                                 <div class="impact-label">Google Views</div>
                             </div>
                             <div class="impact-card">
-                                <div class="impact-number">1K+</div>
-                                <div class="impact-label">YT Subscribers</div>
+                                <div class="impact-number">300K+</div>
+                                <div class="impact-label">Monthly Reach</div>
                             </div>
                         </div>
                     </div>
@@ -244,8 +246,8 @@
                         <div class="non-tech-card">
                             <i class="fas fa-bullhorn"></i>
                             <h4>Content Strategy</h4>
-                            <p>YouTube growth, Instagram reels, short-form video, and audience building — backed by 0→1K
-                                subs in 60 days.</p>
+                            <p>Instagram reels, short-form video, and digital audience building — backed by 300K+
+                                consistent monthly views and 150+ watch hours.</p>
                         </div>
                         <div class="non-tech-card">
                             <i class="fas fa-users"></i>
@@ -298,8 +300,8 @@
                         <div class="diff-number">03</div>
                         <div class="diff-content">
                             <h3>Growth Creator</h3>
-                            <p>Grew Lifeatvedam 0→1K subscribers in 60 days. 300K+ views in a single month. 1.1M Google
-                                Maps views.</p>
+                            <p>Grew Lifeatvedam media channels to 300K+ views in a single month and generated 1.1M+
+                                Google Maps verified views from scratch.</p>
                         </div>
                     </div>
                     <div class="diff-card styled-diff">
@@ -371,10 +373,10 @@
                         <div class="exp-left">
                             <div class="exp-period">Content Strategy</div>
                             <h3 class="exp-company-name">Lifeatvedam</h3>
-                            <span class="exp-role-badge badge-accent">Digital Manager</span>
+                            <span class="exp-role-badge badge-accent">Social Media</span>
                         </div>
                         <div class="exp-right">
-                            <h4 class="exp-role-title">Digital Media Manager</h4>
+                            <h4 class="exp-role-title">Social Media Manager</h4>
                             <p class="exp-text">Directed the complete content pipeline for the campus media agency.
                                 Handled end-to-end execution—from content planning and scripting to on-camera hosting
                                 and leading the editing crews to viral success.</p>
@@ -444,12 +446,12 @@
                             <span class="bento-tag">Verified Local Guide · 163+ Reviews · 50+ Cities</span>
                         </div>
                     </div>
-                    <div class="bento-item sub-stat youtube">
+                    <div class="bento-item sub-stat events">
                         <div class="bento-content">
-                            <i class="fab fa-youtube"></i>
-                            <h3 class="stat-number" data-target="1000">0</h3>
-                            <p>YT Subscribers</p>
-                            <span>(0 → 1K in 60 Days)</span>
+                            <i class="fas fa-ticket-alt"></i>
+                            <h3 class="stat-number" data-target="400">0</h3>
+                            <p>Event Attendees</p>
+                            <span>(Acquired in 30 hours)</span>
                         </div>
                     </div>
                     <div class="bento-item sub-stat watch">
@@ -674,10 +676,11 @@
         <div class="modal-overlay" id="modal-vst-admin">
             <div class="modal-content" data-lenis-prevent="true">
                 <button class="modal-close" onclick="closeModal('modal-vst-admin')">&times;</button>
-                <span class="modal-badge">ENTERPRISE ARCHITECTURE</span>
+                <span class="modal-badge">200 DAILY USERS (DEC)</span>
                 <h2>VST Admin Dashboard</h2>
                 <p>A comprehensive admin dashboard solving a real problem: tracking student progress, managing GitHub
-                    contributions, collecting data via forms, and viewing analytics — all in one place. Built with
+                    contributions, collecting data via forms, and viewing analytics — all in one place. Handled 200
+                    daily active users robustly until December. Built with
                     modular architecture, CI/CD, and security best practices.</p>
                 <h4>Key Features</h4>
                 <ul>
@@ -723,10 +726,11 @@
         <div class="modal-overlay" id="modal-codenexus">
             <div class="modal-content" data-lenis-prevent="true">
                 <button class="modal-close" onclick="closeModal('modal-codenexus')">&times;</button>
-                <span class="modal-badge">60% CONVERSION RATE</span>
+                <span class="modal-badge">400 REGISTRATIONS</span>
                 <h2>Code Nexus — Website & Admin Dashboard</h2>
                 <p>A developer-focused platform bringing coders together with shared resources, discussions, and
-                    collaboration spaces. The event portal achieved 400 attendees in just 30 hours with a 60% conversion
+                    collaboration spaces. The event portal achieved 400 registrations in just 30 hours with a 60%
+                    conversion
                     rate. Includes a companion admin dashboard for organizers.</p>
                 <h4>Key Features</h4>
                 <ul>
@@ -749,9 +753,10 @@
         <div class="modal-overlay" id="modal-noesis">
             <div class="modal-content" data-lenis-prevent="true">
                 <button class="modal-close" onclick="closeModal('modal-noesis')">&times;</button>
-                <span class="modal-badge">TECH FEST</span>
+                <span class="modal-badge">1000 REGISTRATIONS</span>
                 <h2>Noesis Techfest Website</h2>
-                <p>Official digital hub for the annual tech fest. Centralises event schedules, registration workflows,
+                <p>Official digital hub for the annual tech fest. Handled 1000+ student registrations successfully.
+                    Centralises event schedules, registration workflows,
                     and provides essential technical resources for hackathon participants and attendees.</p>
                 <h4>Key Features</h4>
                 <ul>
@@ -774,9 +779,10 @@
         <div class="modal-overlay" id="modal-cultural">
             <div class="modal-content" data-lenis-prevent="true">
                 <button class="modal-close" onclick="closeModal('modal-cultural')">&times;</button>
-                <span class="modal-badge">PRODUCTION LIVE</span>
+                <span class="modal-badge">150+ ACTIVE USERS</span>
                 <h2>VST Cultural Club — Side-Wing Project</h2>
-                <p>A comprehensive web-based management system for the cultural wing of Vedam School of Technology. The
+                <p>A comprehensive web-based management system for the cultural wing of Vedam School of Technology.
+                    Empowered over 150+ users across the student body. The
                     platform serves as the central hub for all cultural activities — from student registrations and
                     society memberships to leadership auditions and administrative oversight.</p>
                 <h4>Key Features</h4>
@@ -800,9 +806,10 @@
         <div class="modal-overlay" id="modal-esports">
             <div class="modal-content" data-lenis-prevent="true">
                 <button class="modal-close" onclick="closeModal('modal-esports')">&times;</button>
-                <span class="modal-badge">E-SPORTS PLATFORM</span>
+                <span class="modal-badge">150+ REGISTRATIONS</span>
                 <h2>Haunt the Arena — E-Sports Platform (BGMI)</h2>
-                <p>A production-ready esports tournament website for the "Haunt the Arena" Halloween gaming event.
+                <p>A production-ready esports tournament website for the "Haunt the Arena" Halloween gaming event,
+                    securing 150+ team registrations.
                     Provides a complete tournament management experience — from player/team registration through bracket
                     generation to winner selection — wrapped in a spooky, high-performance UI with 3D particle effects
                     and immersive animations.</p>
@@ -901,9 +908,10 @@
         <div class="modal-overlay" id="modal-sattvahar">
             <div class="modal-content" data-lenis-prevent="true">
                 <button class="modal-close" onclick="closeModal('modal-sattvahar')">&times;</button>
-                <span class="modal-badge">PAID FREELANCE · LIVE</span>
+                <span class="modal-badge">1000+ CUSTOMERS</span>
                 <h2>Sattvahar Foods — Business Website</h2>
-                <p>Designed, developed, and currently maintain the official business website for Sattvahar Foods.
+                <p>Designed, developed, and currently maintain the official production business website for Sattvahar
+                    Foods — actively serving and used by 1000+ customers.
                     End-to-end from design to deployment and ongoing maintenance.</p>
                 <h4>Key Features</h4>
                 <ul>
@@ -953,6 +961,8 @@
                 <div class="grid-12 books-showcase">
                     <div class="book-item col-span-4">
                         <div class="book-cover book-cover-1">
+                            <img src="book_adolescence.webp" alt="Teenagers Diary Cover" class="book-cover-img"
+                                loading="lazy" decoding="async">
                             <span class="book-number">01</span>
                             <span class="book-title">Teenagers Diary</span>
                             <small>Coming-of-Age</small>
@@ -970,6 +980,8 @@
                     </div>
                     <div class="book-item col-span-4">
                         <div class="book-cover book-cover-2">
+                            <img src="book_travel.webp" alt="Travel Journey Cover" class="book-cover-img" loading="lazy"
+                                decoding="async">
                             <span class="book-number">02</span>
                             <span class="book-title">Travel Journey</span>
                             <small>Travelogue</small>
@@ -987,6 +999,8 @@
                     </div>
                     <div class="book-item col-span-4">
                         <div class="book-cover book-cover-3">
+                            <img src="book_psychology.webp" alt="Getting High on Intimacy Part 1 Cover"
+                                class="book-cover-img" loading="lazy" decoding="async">
                             <span class="book-number">03</span>
                             <span class="book-title">Getting High on Intimacy (Part 1)</span>
                             <small>Psychology</small>
@@ -1003,6 +1017,8 @@
                     </div>
                     <div class="book-item col-span-6">
                         <div class="book-cover book-cover-4">
+                            <img src="book_romance.webp" alt="Getting High on Intimacy Part 2 Cover"
+                                class="book-cover-img" loading="lazy" decoding="async">
                             <span class="book-number">04</span>
                             <span class="book-title">Getting High on Intimacy (Part 2)</span>
                             <small>Psychology</small>
@@ -1019,6 +1035,8 @@
                     </div>
                     <div class="book-item col-span-6">
                         <div class="book-cover book-cover-5">
+                            <img src="book_tech.webp" alt="Broken Cover" class="book-cover-img" loading="lazy"
+                                decoding="async">
                             <span class="book-number">05</span>
                             <span class="book-title">Broken</span>
                             <small>Literary Fiction</small>
@@ -1113,34 +1131,34 @@
                 <div class="grid-12 cert-grid">
                     <div class="cert-card col-span-4" onclick="openModal('cert-modal-1')" style="cursor:pointer;">
                         <div class="cert-image">
-                            <img src="Certification of Core Programming and Design Thinking.jpg"
+                            <img src="Certification of Core Programming and Design Thinking.webp"
                                 alt="Core Programming and Design Thinking" loading="lazy">
                         </div>
                         <h4>Core Programming & Design Thinking</h4>
                     </div>
                     <div class="cert-card col-span-4" onclick="openModal('cert-modal-2')" style="cursor:pointer;">
                         <div class="cert-image">
-                            <img src="Artificial Coding Curriculum Completion Certificate.jpg"
+                            <img src="Artificial Coding Curriculum Completion Certificate.webp"
                                 alt="Artificial Coding Curriculum" loading="lazy">
                         </div>
                         <h4>Artificial Coding Curriculum</h4>
                     </div>
                     <div class="cert-card col-span-4" onclick="openModal('cert-modal-3')" style="cursor:pointer;">
                         <div class="cert-image">
-                            <img src="Certification of UI_UX Designer for Game development .jpg"
+                            <img src="Certification of UI_UX Designer for Game development .webp"
                                 alt="Java Basic Certificate" loading="lazy">
                         </div>
                         <h4>UI/UX Design for Game Development</h4>
                     </div>
                     <div class="cert-card col-span-6" onclick="openModal('cert-modal-4')" style="cursor:pointer;">
                         <div class="cert-image">
-                            <img src="Meta-Version Control.jpg" alt="Meta Version Control" loading="lazy">
+                            <img src="Meta-Version Control.webp" alt="Meta Version Control" loading="lazy">
                         </div>
                         <h4>Meta — Version Control</h4>
                     </div>
                     <div class="cert-card col-span-6" onclick="openModal('cert-modal-5')" style="cursor:pointer;">
                         <div class="cert-image">
-                            <img src="java_basic certificate.jpg" alt="Java Basic Certificate" loading="lazy">
+                            <img src="java_basic certificate.webp" alt="Java Basic Certificate" loading="lazy">
                         </div>
                         <h4>Java Basic Certificate</h4>
                     </div>
@@ -1152,33 +1170,33 @@
         <div class="modal-overlay" id="cert-modal-1">
             <div class="modal-content" style="max-width:900px;">
                 <button class="modal-close" onclick="closeModal('cert-modal-1')">&times;</button>
-                <img src="Certification of Core Programming and Design Thinking.jpg" alt="Core Programming Certificate"
+                <img src="Certification of Core Programming and Design Thinking.webp" alt="Core Programming Certificate"
                     style="width:100%;border-radius:12px;">
             </div>
         </div>
         <div class="modal-overlay" id="cert-modal-2">
             <div class="modal-content" style="max-width:900px;">
                 <button class="modal-close" onclick="closeModal('cert-modal-2')">&times;</button>
-                <img src="Artificial Coding Curriculum Completion Certificate.jpg" alt="AI Coding Certificate"
+                <img src="Artificial Coding Curriculum Completion Certificate.webp" alt="AI Coding Certificate"
                     style="width:100%;border-radius:12px;">
             </div>
         </div>
         <div class="modal-overlay" id="cert-modal-3">
             <div class="modal-content" style="max-width:900px;">
                 <button class="modal-close" onclick="closeModal('cert-modal-3')">&times;</button>
-                <img src="java_basic certificate.jpg" alt="Java Certificate" style="width:100%;border-radius:12px;">
+                <img src="java_basic certificate.webp" alt="Java Certificate" style="width:100%;border-radius:12px;">
             </div>
         </div>
         <div class="modal-overlay" id="cert-modal-4">
             <div class="modal-content" style="max-width:900px;">
                 <button class="modal-close" onclick="closeModal('cert-modal-4')">&times;</button>
-                <img src="Meta-Version Control.jpg" alt="Meta Version Control" style="width:100%;border-radius:12px;">
+                <img src="Meta-Version Control.webp" alt="Meta Version Control" style="width:100%;border-radius:12px;">
             </div>
         </div>
         <div class="modal-overlay" id="cert-modal-5">
             <div class="modal-content" style="max-width:900px;">
                 <button class="modal-close" onclick="closeModal('cert-modal-5')">&times;</button>
-                <img src="Certification of UI_UX Designer for Game development .jpg" alt="UI/UX Certificate"
+                <img src="Certification of UI_UX Designer for Game development .webp" alt="UI/UX Certificate"
                     style="width:100%;border-radius:12px;">
             </div>
         </div>
@@ -1249,7 +1267,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
