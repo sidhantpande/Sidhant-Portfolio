@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time-Table Generator | Sidhant Pande - Web Developer</title>
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="An automated scheduling application that uses algorithmic logic to generate conflict-free academic timetables, optimising time management for students.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sidhantpande.com/projects/timetable-generator.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Time-Table Generator | Sidhant Pande Portfolio">
+    <meta property="og:description" content="An automated scheduling application that uses algorithmic logic to generate conflict-free academic timetables, optimising time management for students.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .project-page-header {
+            padding: 180px 0 60px;
+            background: var(--bg-dark);
+            border-bottom: 1px solid var(--border);
+        }
+        .project-page-title {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            line-height: 0.9;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+        .project-page-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .project-page-body {
+            padding: 80px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .project-page-body p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--text-dim);
+            margin-bottom: 1.5rem;
+        }
+        .project-page-body h3, .project-page-body h4 {
+            font-family: var(--font-outfit);
+            color: var(--text-main);
+            margin: 2.5rem 0 1rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .project-page-body ul {
+            list-style: none;
+            padding: 0;
+        }
+        .project-page-body li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .project-page-body li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-light);
+            font-weight: bold;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 0.2rem;
+            transition: color 0.3s;
+        }
+        .back-link:hover {
+            color: var(--primary-light);
+            border-color: var(--primary-light);
+        }
+    </style>
+</head>
+<body style="background: var(--bg-dark);">
+    <nav class="navbar" style="position: absolute;">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">SIDHANT<span>.</span></a>
+            <div class="nav-links">
+                <a href="../index.html#projects" class="nav-btn-outline" style="border: none !important;">Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <header class="project-page-header">
+            <div class="container" style="max-width: 800px; margin: 0 auto;">
+                <span class="badge" style="margin-bottom: 2rem; display: inline-block;">UTILITY APPLICATION</span>
+                <h1 class="project-page-title">Time-Table Generator</h1>
+                <div class="project-page-meta">
+                    <span class="proj-tech" style="color: var(--primary-light); font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;">Python • Algorithms • Firebase</span>
+                </div>
+            </div>
+        </header>
+        <section class="project-page-body">
+            <div class="container" style="max-width: 800px;">
+                <p><strong style="color: var(--text-main); font-size: 1.25rem;">An automated scheduling application that uses algorithmic logic to generate conflict-free academic timetables, optimising time management for students.</strong></p>
+                
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Algorithmic conflict-free scheduling</li>
+                    <li>Dynamic input for courses, faculty, and time slots</li>
+                    <li>Exportable timetable output</li>
+                    <li>Constraint-based optimisation</li>
+                </ul>
+                
+                <div style="margin-top: 4rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                    <a href="https://github.com/Sidhant185/Time-table" target="_blank" class="nav-btn-outline"><i class="fab fa-github"></i> View Repository</a>
+                </div>
+                
+                <div style="margin-top: 5rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                    <a href="../index.html#projects" class="back-link">← Return to Portfolio</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
