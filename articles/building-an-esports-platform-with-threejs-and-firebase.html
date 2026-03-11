@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Building a Real-Time E-Sports Platform with Three.js and Firebase | Sidhant Pande Blog</title>
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="An architectural breakdown of how I built an immersive, high-performance esports tournament system capable of handling hundreds of concurrent players.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sidhantpande.com/articles/building-an-esports-platform-with-threejs-and-firebase.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Building a Real-Time E-Sports Platform with Three.js and Firebase">
+    <meta property="og:description" content="An architectural breakdown of how I built an immersive, high-performance esports tournament system capable of handling hundreds of concurrent players.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .article-page-header {
+            padding: 180px 0 60px;
+            background: var(--bg-dark);
+            border-bottom: 1px solid var(--border);
+        }
+        .article-page-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            font-weight: 900;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+        .article-page-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            align-items: center;
+        }
+        .article-author {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .article-author img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+        .article-page-body {
+            padding: 80px 0;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .article-page-body p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+        }
+        .article-page-body h3 {
+            font-family: var(--font-outfit);
+            color: var(--text-main);
+            margin: 3.5rem 0 1.5rem;
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+        }
+        .article-page-body ul {
+            margin-bottom: 2.5rem;
+            padding-left: 1.5rem;
+        }
+        .article-page-body li {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+        }
+        .article-page-body strong {
+            color: var(--text-main);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 0.2rem;
+            transition: color 0.3s;
+        }
+        .back-link:hover {
+            color: var(--primary-light);
+            border-color: var(--primary-light);
+        }
+    </style>
+</head>
+<body style="background: var(--bg-dark);">
+    <nav class="navbar" style="position: absolute;">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">SIDHANT<span>.</span></a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-btn-outline" style="border: none !important;">Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <header class="article-page-header">
+            <div class="container" style="max-width: 900px; margin: 0 auto;">
+                <span class="badge" style="margin-bottom: 2rem; display: inline-block;">TECHNICAL DEEP DIVE</span>
+                <h1 class="article-page-title">Building a Real-Time E-Sports Platform with Three.js and Firebase</h1>
+                <div class="article-page-meta">
+                    <div class="article-author">
+                        <img src="../profile.webp" alt="Sidhant Pande">
+                        <span>Sidhant Pande</span>
+                    </div>
+                    <span>•</span>
+                    <span>March 11, 2026</span>
+                    <span>•</span>
+                    <span>5 min read</span>
+                </div>
+            </div>
+        </header>
+        <section class="article-page-body">
+            <div class="container" style="max-width: 750px;">
+                <p><strong style="font-size: 1.3rem; color: var(--text-main); line-height: 1.6;">An architectural breakdown of how I built an immersive, high-performance esports tournament system capable of handling hundreds of concurrent players.</strong></p>
+                
+                
+            <p>Esports platforms require an incredibly unique architecture. You aren't just serving forms; you are serving real-time brackets, interactive 3D elements, and glitch-free audio experiences simultaneously. For the <strong>Haunt the Arena</strong> tournament, I decided to push the boundaries of WebGL and serverless databases.</p>
+            
+            <h3>The Architecture Breakdown</h3>
+            <p>The core philosophy behind the tech stack was <em>zero-compromise execution</em>. I needed a system that wouldn't crash when 150+ teams hammered the registration API exactly when the countdown hit zero.</p>
+            
+            <ul>
+                <li><strong>Frontend Engine:</strong> A completely custom HTML5/CSS3 layer overlaid on top of a Three.js canvas. The floating particle background creates immediate immersion.</li>
+                <li><strong>Real-Time Sync:</strong> Firebase Firestore was the obvious choice for the bracket system. As an admin updates a match result, the bracket UI instantly updates across all connected clients via Firestore's WebSocket integration.</li>
+                <li><strong>Security:</strong> Firebase Authentication ensures that team captains can only edit their own roster details.</li>
+            </ul>
+
+            <h3>Handling 3D Performance</h3>
+            <p>Using Three.js on a landing page is risky because of mobile performance. I implemented an intersection observer that pauses the WebGL rendering loop whenever the canvas is scrolled out of view, saving battery life and keeping the UI buttery smooth.</p>
+            
+            <p>Building platforms like this proves that the gap between a standard "web page" and an immersive "digital experience" is purely architectural.</p>
+        
+                
+                <div style="margin-top: 5rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                    <a href="../index.html" class="back-link">← Return to Portfolio</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
