@@ -1,6 +1,7 @@
 // ===== Lenis + GSAP Clean Setup =====
 const lenis = new Lenis({
-    duration: 1.2,
+    duration: 0.8,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smooth: true,
     smoothWheel: true,
     normalizeWheel: true
@@ -64,17 +65,17 @@ const heroTl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
 heroTl
     .from(splitHeroTitle.chars, { 
-        y: 100, 
+        y: 80, 
         opacity: 0, 
-        rotationX: -90,
-        stagger: 0.02, 
-        duration: 2, 
+        rotationX: -45,
+        stagger: 0.015, 
+        duration: 1.2, 
         transformOrigin: "0% 50% -50"
     })
-    .from('.hero-description', { y: 30, opacity: 0, duration: 1.2 }, '-=1.5')
-    .from('.hero-actions', { y: 30, opacity: 0, duration: 1 }, '-=1.2')
-    .from('.hero-socials', { y: 20, opacity: 0, duration: 1 }, '-=1')
-    .from('.hero-visual', { scale: 0.95, opacity: 0, duration: 1.5 }, '-=1.8');
+    .from('.hero-description', { y: 20, opacity: 0, duration: 1 }, '-=0.8')
+    .from('.hero-actions', { y: 20, opacity: 0, duration: 0.8 }, '-=0.6')
+    .from('.hero-socials', { y: 15, opacity: 0, duration: 0.8 }, '-=0.5')
+    .from('.hero-visual', { scale: 0.95, opacity: 0, duration: 1.2 }, '-=1');
 
 // ===== Section Title Animations =====
 // PERF-3 FIX: Store instances so we can revert on resize
