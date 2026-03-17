@@ -122,11 +122,11 @@ h4,
 }
 
 .gradient-text {
-    background: none;
-    -webkit-background-clip: unset;
-    background-clip: unset;
-    -webkit-text-fill-color: var(--text-main);
-    color: var(--text-main);
+    background: linear-gradient(120deg, #ffffff, #f5d28a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #ffffff;
 }
 
 /* NAV - BRUTALIST PILL */
@@ -2384,8 +2384,8 @@ section {
     position: fixed;
     top: 0;
     left: 0;
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
     background: #ffffff;
     border-radius: 50%;
     pointer-events: none;
@@ -2397,8 +2397,8 @@ section {
 }
 
 .cursor-diff.hover-active {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
 button {
