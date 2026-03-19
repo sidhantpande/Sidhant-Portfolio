@@ -83,21 +83,24 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#hero">Skip to main content</a>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#hero" class="logo">SIDHANT<span>.</span></a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-primary">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
+                <a href="#articles">Writing</a>
+                <a href="#books">Books</a>
                 <a href="#contact" class="nav-btn">Let's Talk</a>
             </div>
-            <div class="menu-toggle" aria-label="Toggle menu">
+            <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-controls="nav-primary" aria-expanded="false">
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -121,13 +124,13 @@
                         <div class="hero-actions-block">
                             <div class="hero-actions">
                                 <a href="#projects" class="btn btn-primary">Selected Work</a>
-                                <a href="Sidhant_Pande_Resume.pdf" target="_blank" download
+                                <a href="Sidhant_Pande_Resume.pdf" target="_blank" rel="noopener noreferrer" download
                                     class="btn btn-secondary">Resume</a>
                             </div>
                             <div class="hero-socials">
-                                <a href="https://github.com/Sidhant185" target="_blank">GH.</a>
-                                <a href="https://www.linkedin.com/in/sidhantpande" target="_blank">IN.</a>
-                                <a href="https://instagram.com/sidhant908" target="_blank">IG.</a>
+                                <a href="https://github.com/Sidhant185" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">GH.</a>
+                                <a href="https://www.linkedin.com/in/sidhantpande" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">IN.</a>
+                                <a href="https://instagram.com/sidhant908" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in new tab)">IG.</a>
                             </div>
                         </div>
                     </div>
@@ -363,7 +366,7 @@
                             <p class="exp-text">Designed, developed, and currently maintain the official e-commerce
                                 website for Sattvahar Foods. Delivered a seamless, highly responsive UI integrated with
                                 comprehensive back-office operational tooling.</p>
-                            <a href="https://sattvahar.in" target="_blank" class="exp-link-new">Visit sattvahar.in <i
+                            <a href="https://sattvahar.in" target="_blank" rel="noopener noreferrer" class="exp-link-new">Visit sattvahar.in <i
                                     class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -522,7 +525,7 @@
                                 <p>Comprehensive, voice-enabled AI assistant with emotional intelligence,
                                     persistent memory, and proactive care.</p>
                                 <div class="proj-tech">Python • Flask • modern LLMs</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -535,7 +538,7 @@
                                 <p>Next-generation, voice-activated AI assistant with real-time internet
                                     intelligence and autonomous system automation.</p>
                                 <div class="proj-tech">Web Scraping • TTS • Gemini</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -553,7 +556,7 @@
                                 <p>AI-powered learning ecosystem built in 24 hours. Monaco Editor, Gemini 2.0 AI
                                     evaluation.</p>
                                 <div class="proj-tech">React • Firebase • Gemini 2.0</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -566,7 +569,7 @@
                                 <p>Comprehensive admin dashboard for tracking student progress, GitHub contributions.
                                 </p>
                                 <div class="proj-tech">Vanilla JS • GitHub API • Firestore</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -579,7 +582,7 @@
                                 <p>User-facing platform for the university club — sharing resources, events, and
                                     onboarding students.</p>
                                 <div class="proj-tech">HTML/CSS • JavaScript • Firebase</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -592,7 +595,7 @@
                                 <p>Competitive gaming platform — tournament brackets, team registrations, leaderboards,
                                     and live updates.</p>
                                 <div class="proj-tech">React.js • Node.js • Firebase</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -605,7 +608,7 @@
                                 <p>Automated scheduling app using algorithmic logic to generate conflict-free academic
                                     timetables.</p>
                                 <div class="proj-tech">Python • Algorithms • Firebase</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -622,7 +625,7 @@
                                 <h3>Code Nexus Website</h3>
                                 <p>High-conversion event portal and admin dashboard. 400 attendees in 30 hours.</p>
                                 <div class="proj-tech">React.js • Tailwind CSS • Firebase</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -635,7 +638,7 @@
                                 <p>Official digital hub for the annual tech fest — centralising schedules, and
                                     resources.</p>
                                 <div class="proj-tech">HTML5 • CSS3 • JS • Firebase</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -647,7 +650,7 @@
                                 <h3>Cultural Club Website</h3>
                                 <p>Official platform for college events — live and used by hundreds of students.</p>
                                 <div class="proj-tech">HTML • CSS • JS • Firebase</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -659,7 +662,7 @@
                                 <h3>Sattvahar Foods Website</h3>
                                 <p>Designed and maintain the official business website — end-to-end.</p>
                                 <div class="proj-tech">HTML/CSS • JS • E-commerce</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -671,7 +674,7 @@
                                 <h3>Client Portfolio</h3>
                                 <p>Custom UI/UX designed and delivered end-to-end for a paying client.</p>
                                 <div class="proj-tech">HTML • CSS • JS • Tailwind</div>
-                                <span class="proj-cta">Click for details →</span>
+                                <span class="proj-cta">View project →</span>
                             </div>
                         </div>
                     </a>
@@ -680,45 +683,39 @@
         </section>
 
         <!-- ==================== ARTICLES ==================== -->
-        <section id="articles" class="articles-section" style="padding: 80px 0; background: var(--bg-main);">
+        <section id="articles" class="articles-section">
             <div class="container">
                 <div class="section-header centered">
                     <span class="section-subtitle">TOPICAL AUTHORITY</span>
                     <h2 class="section-title">Technical Writing</h2>
                     <p class="section-desc">Deep-dive architectural breakdowns and technical tutorials.</p>
                 </div>
-                <div class="grid-12" style="gap: 2rem;">
+                <div class="grid-12 articles-grid">
                     <a href="articles/building-an-esports-platform-with-threejs-and-firebase.html"
-                        class="col-span-6 project-item" style="display:block; text-decoration:none;">
-                        <div class="project-card"
-                            style="padding: 2.5rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 16px; transition: all 0.3s; height: 100%;">
-                            <span class="proj-badge" style="margin-bottom: 1rem; display: inline-block;">TECHNICAL DEEP
+                        class="col-span-6 project-item article-link">
+                        <div class="project-card article-card">
+                            <span class="proj-badge article-badge">TECHNICAL DEEP
                                 DIVE</span>
-                            <h3
-                                style="font-size: 1.5rem; font-family: var(--font-outfit); color: var(--text-main); margin-bottom: 1rem; text-transform: uppercase;">
+                            <h3 class="article-title">
                                 Building a Real-Time E-Sports Platform with Three.js and Firebase</h3>
-                            <p style="color: var(--text-dim); line-height: 1.6; margin-bottom: 2rem;">An architectural
+                            <p class="article-desc">An architectural
                                 breakdown of how I built an immersive, high-performance esports tournament system
                                 capable of handling hundreds of concurrent players.</p>
-                            <span class="proj-cta"
-                                style="color: var(--primary-light); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem;">Read
+                            <span class="proj-cta article-cta">Read
                                 Article →</span>
                         </div>
                     </a>
                     <a href="articles/react-firebase-admin-dashboard-architecture.html" class="col-span-6 project-item"
-                        style="display:block; text-decoration:none;">
-                        <div class="project-card"
-                            style="padding: 2.5rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 16px; transition: all 0.3s; height: 100%;">
-                            <span class="proj-badge" style="margin-bottom: 1rem; display: inline-block;">SYSTEM
+                        class="article-link">
+                        <div class="project-card article-card">
+                            <span class="proj-badge article-badge">SYSTEM
                                 ARCHITECTURE</span>
-                            <h3
-                                style="font-size: 1.5rem; font-family: var(--font-outfit); color: var(--text-main); margin-bottom: 1rem; text-transform: uppercase;">
+                            <h3 class="article-title">
                                 Architecting a Highly Scalable React & Firebase Admin Dashboard</h3>
-                            <p style="color: var(--text-dim); line-height: 1.6; margin-bottom: 2rem;">How I structure
+                            <p class="article-desc">How I structure
                                 React applications and Firebase security rules to support enterprise-level admin
                                 operations and daily active users.</p>
-                            <span class="proj-cta"
-                                style="color: var(--primary-light); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem;">Read
+                            <span class="proj-cta article-cta">Read
                                 Article →</span>
                         </div>
                     </a>
@@ -751,7 +748,7 @@
                                 shifts, and the unique struggles that shape young adulthood.</p>
                             <div class="book-themes"><span>Identity</span><span>Self-Discovery</span><span>Youth</span>
                             </div>
-                            <a href="https://www.amazon.com/dp/B0DJL3WJ3Z" target="_blank" class="book-link">View on
+                            <a href="https://www.amazon.com/dp/B0DJL3WJ3Z" target="_blank" rel="noopener noreferrer" class="book-link">View on
                                 Amazon <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
@@ -770,7 +767,7 @@
                                 wanderlust and lasting memories.</p>
                             <div class="book-themes"><span>Adventure</span><span>Wanderlust</span><span>Culture</span>
                             </div>
-                            <a href="https://www.amazon.com/dp/B0DJL6TMV4" target="_blank" class="book-link">View on
+                            <a href="https://www.amazon.com/dp/B0DJL6TMV4" target="_blank" rel="noopener noreferrer" class="book-link">View on
                                 Amazon <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
@@ -788,7 +785,7 @@
                                 emotional intimacy, offering a roadmap for vulnerability and building deeply meaningful
                                 relationships.</p>
                             <div class="book-themes"><span>Emotional Intelligence</span><span>Relationships</span></div>
-                            <a href="https://www.amazon.com/dp/B0DJKZG57Q" target="_blank" class="book-link">View on
+                            <a href="https://www.amazon.com/dp/B0DJKZG57Q" target="_blank" rel="noopener noreferrer" class="book-link">View on
                                 Amazon <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
@@ -806,7 +803,7 @@
                                 addressing conflict resolution, navigating hurdles, and the evolving nature of profound
                                 attachment.</p>
                             <div class="book-themes"><span>Connection</span><span>Conflict Resolution</span></div>
-                            <a href="https://www.amazon.com/dp/B0DJL1YCTX" target="_blank" class="book-link">View on
+                            <a href="https://www.amazon.com/dp/B0DJL1YCTX" target="_blank" rel="noopener noreferrer" class="book-link">View on
                                 Amazon <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
@@ -824,7 +821,7 @@
                                 profound vulnerability of the human spirit when navigating the aftermath of loss.</p>
                             <div class="book-themes"><span>Heartbreak</span><span>Resilience</span><span>Healing</span>
                             </div>
-                            <a href="https://www.amazon.com/dp/B0DJL65TYW" target="_blank" class="book-link">View on
+                            <a href="https://www.amazon.com/dp/B0DJL65TYW" target="_blank" rel="noopener noreferrer" class="book-link">View on
                                 Amazon <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
@@ -843,7 +840,7 @@
                 <div class="grid-12 presence-grid">
                     <div class="presence-card video-card col-span-6">
                         <div class="video-embed">
-                            <a href="https://youtu.be/x75mxKf1QdU" target="_blank" class="yt-thumb-link">
+                            <a href="https://youtu.be/x75mxKf1QdU" target="_blank" rel="noopener noreferrer" class="yt-thumb-link">
                                 <img src="https://i.ytimg.com/vi/x75mxKf1QdU/hqdefault.jpg" alt="Featured Video 1"
                                     loading="lazy" width="480" height="360">
                                 <div class="yt-play-btn"><i class="fab fa-youtube"></i></div>
@@ -856,7 +853,7 @@
                     </div>
                     <div class="presence-card video-card col-span-6">
                         <div class="video-embed">
-                            <a href="https://youtu.be/BTvGRgYX5zg" target="_blank" class="yt-thumb-link">
+                            <a href="https://youtu.be/BTvGRgYX5zg" target="_blank" rel="noopener noreferrer" class="yt-thumb-link">
                                 <img src="https://i.ytimg.com/vi/BTvGRgYX5zg/hqdefault.jpg" alt="Featured Video 2"
                                     loading="lazy" width="480" height="360">
                                 <div class="yt-play-btn"><i class="fab fa-youtube"></i></div>
@@ -869,23 +866,23 @@
                     </div>
                 </div>
                 <div class="grid-12 presence-links" style="gap: 1.5rem;">
-                    <a href="https://instagram.com/sidhant908" target="_blank" class="presence-link-card col-span-3">
+                    <a href="https://instagram.com/sidhant908" target="_blank" rel="noopener noreferrer" class="presence-link-card col-span-3">
                         <i class="fab fa-instagram"></i>
                         <span>Instagram — @sidhant908</span>
                         <small>7,500+ Avg Reach per Reel</small>
                     </a>
-                    <a href="https://github.com/Sidhant185" target="_blank" class="presence-link-card col-span-3">
+                    <a href="https://github.com/Sidhant185" target="_blank" rel="noopener noreferrer" class="presence-link-card col-span-3">
                         <i class="fab fa-github"></i>
                         <span>GitHub — Sidhant185</span>
                         <small>14+ Repositories</small>
                     </a>
-                    <a href="https://www.linkedin.com/in/sidhantpande" target="_blank"
+                    <a href="https://www.linkedin.com/in/sidhantpande" target="_blank" rel="noopener noreferrer"
                         class="presence-link-card col-span-3">
                         <i class="fab fa-linkedin"></i>
                         <span>LinkedIn — sidhantpande</span>
                         <small>Professional Network</small>
                     </a>
-                    <a href="mailto:pandesidhant908@gmail.com" target="_blank" class="presence-link-card col-span-3">
+                    <a href="mailto:sidhantpande222@gmail.com" target="_blank" rel="noopener noreferrer" class="presence-link-card col-span-3">
                         <i class="fas fa-envelope"></i>
                         <span>Email Address</span>
                         <small>Booking &amp; Collaborations</small>
@@ -903,77 +900,77 @@
                     <p class="section-desc">Verified credentials and course completions from leading platforms.</p>
                 </div>
                 <div class="grid-12 cert-grid">
-                    <div class="cert-card col-span-5" onclick="openModal('cert-modal-1')">
+                    <button class="cert-card cert-trigger col-span-5" type="button" onclick="openModal('cert-modal-1', this)" aria-controls="cert-modal-1" aria-label="Open Core Programming and Design Thinking certificate">
                         <div class="cert-image">
                             <img src="Certification of Core Programming and Design Thinking.webp"
                                 alt="Core Programming and Design Thinking" loading="lazy">
                         </div>
                         <h4>Core Programming &amp; Design Thinking</h4>
-                    </div>
-                    <div class="cert-card col-span-7" onclick="openModal('cert-modal-2')">
+                    </button>
+                    <button class="cert-card cert-trigger col-span-7" type="button" onclick="openModal('cert-modal-2', this)" aria-controls="cert-modal-2" aria-label="Open Artificial Coding Curriculum certificate">
                         <div class="cert-image">
                             <img src="Artificial Coding Curriculum Completion Certificate.webp"
                                 alt="Artificial Coding Curriculum" loading="lazy">
                         </div>
                         <h4>Artificial Coding Curriculum</h4>
-                    </div>
-                    <div class="cert-card col-span-4" onclick="openModal('cert-modal-3')">
+                    </button>
+                    <button class="cert-card cert-trigger col-span-4" type="button" onclick="openModal('cert-modal-3', this)" aria-controls="cert-modal-3" aria-label="Open UI/UX Design for Game Development certificate">
                         <div class="cert-image">
                             <img src="Certification of UI_UX Designer for Game development .webp"
                                 alt="UI/UX Game Development" loading="lazy">
                         </div>
                         <h4>UI/UX Design for Game Development</h4>
-                    </div>
-                    <div class="cert-card col-span-4" onclick="openModal('cert-modal-4')">
+                    </button>
+                    <button class="cert-card cert-trigger col-span-4" type="button" onclick="openModal('cert-modal-4', this)" aria-controls="cert-modal-4" aria-label="Open Meta Version Control certificate">
                         <div class="cert-image">
                             <img src="Meta-Version Control.webp" alt="Meta Version Control" loading="lazy">
                         </div>
                         <h4>Meta — Version Control</h4>
-                    </div>
-                    <div class="cert-card col-span-4" onclick="openModal('cert-modal-5')">
+                    </button>
+                    <button class="cert-card cert-trigger col-span-4" type="button" onclick="openModal('cert-modal-5', this)" aria-controls="cert-modal-5" aria-label="Open Java Basic certificate">
                         <div class="cert-image">
                             <img src="java_basic certificate.webp" alt="Java Basic Certificate" loading="lazy">
                         </div>
                         <h4>Java Basic Certificate</h4>
-                    </div>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- Certification Modals -->
         <div class="modal-overlay" id="cert-modal-1">
-            <div class="modal-content" style="max-width:900px;">
-                <button class="modal-close" onclick="closeModal('cert-modal-1')">&times;</button>
+            <div class="modal-content modal-content-wide">
+                <button class="modal-close" aria-label="Close certificate preview" onclick="closeModal('cert-modal-1')">&times;</button>
                 <img src="Certification of Core Programming and Design Thinking.webp" alt="Core Programming Certificate"
-                    style="width:100%;border-radius:12px;" loading="lazy">
+                    class="modal-certificate-image" loading="lazy">
             </div>
         </div>
         <div class="modal-overlay" id="cert-modal-2">
-            <div class="modal-content" style="max-width:900px;">
-                <button class="modal-close" onclick="closeModal('cert-modal-2')">&times;</button>
+            <div class="modal-content modal-content-wide">
+                <button class="modal-close" aria-label="Close certificate preview" onclick="closeModal('cert-modal-2')">&times;</button>
                 <img src="Artificial Coding Curriculum Completion Certificate.webp" alt="AI Coding Certificate"
-                    style="width:100%;border-radius:12px;" loading="lazy">
+                    class="modal-certificate-image" loading="lazy">
             </div>
         </div>
         <div class="modal-overlay" id="cert-modal-3">
-            <div class="modal-content" style="max-width:900px;">
-                <button class="modal-close" onclick="closeModal('cert-modal-3')">&times;</button>
-                <img src="java_basic certificate.webp" alt="Java Certificate" style="width:100%;border-radius:12px;"
+            <div class="modal-content modal-content-wide">
+                <button class="modal-close" aria-label="Close certificate preview" onclick="closeModal('cert-modal-3')">&times;</button>
+                <img src="Certification of UI_UX Designer for Game development .webp" alt="UI/UX Certificate" class="modal-certificate-image"
                     loading="lazy">
             </div>
         </div>
         <div class="modal-overlay" id="cert-modal-4">
-            <div class="modal-content" style="max-width:900px;">
-                <button class="modal-close" onclick="closeModal('cert-modal-4')">&times;</button>
-                <img src="Meta-Version Control.webp" alt="Meta Version Control" style="width:100%;border-radius:12px;"
+            <div class="modal-content modal-content-wide">
+                <button class="modal-close" aria-label="Close certificate preview" onclick="closeModal('cert-modal-4')">&times;</button>
+                <img src="Meta-Version Control.webp" alt="Meta Version Control" class="modal-certificate-image"
                     loading="lazy">
             </div>
         </div>
         <div class="modal-overlay" id="cert-modal-5">
-            <div class="modal-content" style="max-width:900px;">
-                <button class="modal-close" onclick="closeModal('cert-modal-5')">&times;</button>
-                <img src="Certification of UI_UX Designer for Game development .webp" alt="UI/UX Certificate"
-                    style="width:100%;border-radius:12px;" loading="lazy">
+            <div class="modal-content modal-content-wide">
+                <button class="modal-close" aria-label="Close certificate preview" onclick="closeModal('cert-modal-5')">&times;</button>
+                <img src="java_basic certificate.webp" alt="Java Certificate"
+                    class="modal-certificate-image" loading="lazy">
             </div>
         </div>
 
@@ -992,6 +989,7 @@
                             products —
                             I'm always open to meaningful conversations.
                         </p>
+                        <p class="contact-desc">Typical response time: within 24 hours. Include your project goals, timeline, and budget range.</p>
 
                         <div class="contact-cta">
                             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sidhantpande222@gmail.com"
@@ -1002,19 +1000,19 @@
                     </div>
 
                     <div class="contact-right">
-                        <a href="https://www.linkedin.com/in/sidhantpande" target="_blank" class="contact-card">
+                        <a href="https://www.linkedin.com/in/sidhantpande" target="_blank" rel="noopener noreferrer" class="contact-card">
                             <i class="fab fa-linkedin"></i>
                             <h4>LinkedIn</h4>
                             <span>Connect Professionally</span>
                         </a>
 
-                        <a href="https://github.com/Sidhant185" target="_blank" class="contact-card">
+                        <a href="https://github.com/Sidhant185" target="_blank" rel="noopener noreferrer" class="contact-card">
                             <i class="fab fa-github"></i>
                             <h4>GitHub</h4>
                             <span>View Code</span>
                         </a>
 
-                        <a href="https://instagram.com/sidhant908" target="_blank" class="contact-card">
+                        <a href="https://instagram.com/sidhant908" target="_blank" rel="noopener noreferrer" class="contact-card">
                             <i class="fab fa-instagram"></i>
                             <h4>Instagram</h4>
                             <span>Follow Journey</span>
@@ -1030,9 +1028,8 @@
 
                 </div>
 
-                <div class="footer-copyright"
-                    style="margin-top: 5rem; text-align: center; border-top: 1px solid var(--border); padding-top: 2rem;">
-                    <p style="color: var(--text-muted); font-size: 0.85rem;">&copy; 2025 Sidhant Pande. Built with
+                <div class="footer-copyright footer-copyright-main">
+                    <p class="footer-copyright-text">&copy; 2026 Sidhant Pande. Built with
                         Discipline.</p>
                 </div>
             </div>

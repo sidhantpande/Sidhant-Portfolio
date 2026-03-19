@@ -1,21 +1,25 @@
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // ===== Lenis + GSAP Clean Setup =====
 const lenis = new Lenis({
-    duration: 0.8,
+    duration: prefersReducedMotion ? 0 : 0.8,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true,
-    smoothWheel: true,
-    normalizeWheel: true
+    smooth: !prefersReducedMotion,
+    smoothWheel: !prefersReducedMotion,
+    normalizeWheel: !prefersReducedMotion
 });
 
 gsap.registerPlugin(ScrollTrigger);
 
-lenis.on("scroll", (e) => {
-    ScrollTrigger.update();
-});
+if (!prefersReducedMotion) {
+    lenis.on("scroll", () => {
+        ScrollTrigger.update();
+    });
 
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-});
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+}
 
 gsap.ticker.lagSmoothing(0);
 
@@ -31,10 +35,11 @@ if (menuToggle && navLinks) {
         menuToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
         document.body.style.overflow = isOpening ? 'hidden' : '';
+        menuToggle.setAttribute('aria-expanded', String(isOpening));
         // JS-4 FIX: Stop/start Lenis with the mobile nav
-        if (isOpening) {
+        if (!prefersReducedMotion && isOpening) {
             lenis.stop();
-        } else {
+        } else if (!prefersReducedMotion) {
             lenis.start();
         }
     });
@@ -44,7 +49,8 @@ if (menuToggle && navLinks) {
             menuToggle.classList.remove('active');
             navLinks.classList.remove('active');
             document.body.style.overflow = '';
-            lenis.start(); // JS-4 FIX
+            menuToggle.setAttribute('aria-expanded', 'false');
+            if (!prefersReducedMotion) lenis.start(); // JS-4 FIX
         });
     });
 
@@ -54,17 +60,21 @@ if (menuToggle && navLinks) {
             menuToggle.classList.remove('active');
             navLinks.classList.remove('active');
             document.body.style.overflow = '';
-            lenis.start(); // JS-4 FIX
+            menuToggle.setAttribute('aria-expanded', 'false');
+            if (!prefersReducedMotion) lenis.start(); // JS-4 FIX
         }
     });
 }
 
 // ===== Hero Entrance =====
-const splitHeroTitle = new SplitType('.hero-title', { types: 'lines, words, chars' });
+const splitHeroTitle = prefersReducedMotion
+    ? null
+    : new SplitType('.hero-title', { types: 'lines, words, chars' });
 const heroTl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
+if (!prefersReducedMotion && splitHeroTitle) {
 heroTl
-    .from(splitHeroTitle.chars, { 
+    .from(splitHeroTitle.chars, {
         y: 80, 
         opacity: 0, 
         rotationX: -45,
@@ -76,6 +86,20 @@ heroTl
     .from('.hero-actions', { y: 20, opacity: 0, duration: 0.8 }, '-=0.6')
     .from('.hero-socials', { y: 15, opacity: 0, duration: 0.8 }, '-=0.5')
     .from('.hero-visual', { scale: 0.95, opacity: 0, duration: 1.2 }, '-=1');
+}
+
+// SplitType sets inline text-align on .line/.word/.char — keep hero centered on mobile/tablet
+function syncHeroTitleAlignment() {
+    const narrow = window.matchMedia('(max-width: 992px)').matches;
+    const title = document.querySelector('.hero-title');
+    if (!title) return;
+    title.querySelectorAll('.line, .word, .char').forEach((el) => {
+        el.style.textAlign = narrow ? 'center' : '';
+    });
+    if (narrow) title.style.textAlign = 'center';
+    else title.style.textAlign = '';
+}
+syncHeroTitleAlignment();
 
 // ===== Section Title Animations =====
 // PERF-3 FIX: Store instances so we can revert on resize
@@ -83,6 +107,7 @@ const splitInstances = [];
 const sectionTitles = document.querySelectorAll('.section-title');
 
 function initSplitAnimations() {
+    if (prefersReducedMotion) return;
     // Revert existing instances before re-splitting
     splitInstances.forEach(s => s.revert());
     splitInstances.length = 0;
@@ -108,15 +133,22 @@ initSplitAnimations();
 
 // Re-init on resize (debounced)
 let resizeTimer;
+let wasNarrow = window.matchMedia('(max-width: 992px)').matches;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
+        const isNarrow = window.matchMedia('(max-width: 992px)').matches;
         ScrollTrigger.refresh();
-        initSplitAnimations();
+        if (isNarrow !== wasNarrow) {
+            initSplitAnimations();
+            wasNarrow = isNarrow;
+        }
+        syncHeroTitleAlignment();
     }, 300);
 });
 
 // ===== Parallax & Reveal for Images =====
+if (!prefersReducedMotion) {
 gsap.utils.toArray('.image-inner').forEach(container => {
     const img = container.querySelector('img');
     if(img) {
@@ -132,6 +164,7 @@ gsap.utils.toArray('.image-inner').forEach(container => {
         });
     }
 });
+}
 
 // ===== Number Counter =====
 const statsObserver = new IntersectionObserver((entries) => {
@@ -184,15 +217,20 @@ document.querySelectorAll('.modal-overlay').forEach(modal => {
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
     modal.setAttribute('aria-hidden', 'true');
+    modal.setAttribute('aria-label', 'Certificate preview dialog');
 });
 
-function openModal(id) {
+function openModal(id, triggerEl) {
     const modal = document.getElementById(id);
     if (!modal) return;
     modal.classList.add('active');
     modal.setAttribute('aria-hidden', 'false');
-    lenis.stop();
+    openModal.activeModal = modal;
+    openModal.lastFocused = triggerEl instanceof HTMLElement ? triggerEl : document.activeElement;
+    if (!prefersReducedMotion) lenis.stop();
     document.body.style.overflow = 'hidden';
+    const firstFocusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (firstFocusable) firstFocusable.focus();
 }
 
 function closeModal(id) {
@@ -201,7 +239,11 @@ function closeModal(id) {
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
-    lenis.start();
+    if (!prefersReducedMotion) lenis.start();
+    if (openModal.lastFocused && openModal.lastFocused instanceof HTMLElement) {
+        openModal.lastFocused.focus();
+    }
+    openModal.activeModal = null;
 }
 
 // Close modal on overlay click
@@ -211,20 +253,41 @@ document.querySelectorAll('.modal-overlay').forEach(overlay => {
             overlay.classList.remove('active');
             overlay.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
-            lenis.start(); // JS-2 FIX
+            if (!prefersReducedMotion) lenis.start(); // JS-2 FIX
+            if (openModal.lastFocused && openModal.lastFocused instanceof HTMLElement) {
+                openModal.lastFocused.focus();
+            }
+            openModal.activeModal = null;
         }
     });
 });
 
 // Close modal on Escape key
 document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab' && openModal.activeModal) {
+        const focusable = openModal.activeModal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    }
     if (e.key === 'Escape') {
         document.querySelectorAll('.modal-overlay.active').forEach(modal => {
             modal.classList.remove('active');
             modal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
         });
-        lenis.start(); // JS-1 FIX — moved outside loop so it only runs once
+        if (!prefersReducedMotion) lenis.start(); // JS-1 FIX — moved outside loop so it only runs once
+        if (openModal.lastFocused && openModal.lastFocused instanceof HTMLElement) {
+            openModal.lastFocused.focus();
+        }
+        openModal.activeModal = null;
     }
 });
 
@@ -239,6 +302,11 @@ let mouseX = 0;
 let mouseY = 0;
 let cursorX = 0;
 let cursorY = 0;
+const customCursorEnabled = !!cursor && !prefersReducedMotion && window.matchMedia('(pointer: fine)').matches;
+
+if (customCursorEnabled) {
+    document.body.classList.add('use-custom-cursor');
+}
 
 document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
@@ -246,23 +314,24 @@ document.addEventListener('mousemove', (e) => {
 });
 
 // PERF-4 FIX: Pause cursor interpolation when tab is hidden
-let cursorTickerId = null;
+let cursorTickFn = null;
 
 function startCursorTicker() {
-    if (cursorTickerId) return;
-    cursorTickerId = gsap.ticker.add(() => {
+    if (!customCursorEnabled || cursorTickFn) return;
+    cursorTickFn = () => {
         cursorX += (mouseX - cursorX) * 0.5;
         cursorY += (mouseY - cursorY) * 0.5;
         if (cursor) {
             cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
         }
-    });
+    };
+    gsap.ticker.add(cursorTickFn);
 }
 
 function stopCursorTicker() {
-    if (cursorTickerId) {
-        gsap.ticker.remove(cursorTickerId);
-        cursorTickerId = null;
+    if (cursorTickFn) {
+        gsap.ticker.remove(cursorTickFn);
+        cursorTickFn = null;
     }
 }
 
@@ -281,9 +350,19 @@ const interactiveElements = document.querySelectorAll('a, button, .project-card,
 
 interactiveElements.forEach(el => {
     el.addEventListener('mouseenter', () => {
-        if(cursor) cursor.classList.add('hover-active');
+        if(cursor && customCursorEnabled) cursor.classList.add('hover-active');
     });
     el.addEventListener('mouseleave', () => {
-        if(cursor) cursor.classList.remove('hover-active');
+        if(cursor && customCursorEnabled) cursor.classList.remove('hover-active');
+    });
+});
+
+// Keep native cursor in dense grids for reliable visual feedback
+document.querySelectorAll('.projects-section, .certifications-section').forEach((section) => {
+    section.addEventListener('mouseenter', () => {
+        if (customCursorEnabled) document.body.classList.add('native-cursor-zone');
+    });
+    section.addEventListener('mouseleave', () => {
+        document.body.classList.remove('native-cursor-zone');
     });
 });
