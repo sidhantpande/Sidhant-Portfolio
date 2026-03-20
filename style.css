@@ -100,23 +100,7 @@ a {
     cursor: pointer;
 }
 
-.skip-link {
-    position: absolute;
-    left: 1rem;
-    top: -3rem;
-    z-index: 2000;
-    background: #fff;
-    color: #000;
-    padding: 0.6rem 1rem;
-    font-size: 0.82rem;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    border: 1px solid #000;
-}
 
-.skip-link:focus-visible {
-    top: 1rem;
-}
 
 *:focus-visible {
     outline: 2px solid var(--primary);
