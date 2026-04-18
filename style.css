@@ -4629,6 +4629,7 @@ section.archive-filters {
     font-size: 4rem;
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
