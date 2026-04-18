@@ -208,9 +208,11 @@ document.querySelectorAll('.stat-number').forEach(stat => statsObserver.observe(
 // ===== Navbar Scroll Effect =====
 const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+}
 
 // ===== Project Modals & Accessibility =====
 document.querySelectorAll('.modal-overlay').forEach(modal => {
@@ -291,8 +293,139 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// ===== Refresh ScrollTrigger after load =====
+// ===== Swiper Initialization (Project Slider) =====
+const initSwiper = () => {
+    if (document.querySelector('.project-slider')) {
+        new Swiper('.project-slider', {
+            slidesPerView: 1.2,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1.5,
+                },
+                1024: {
+                    slidesPerView: 1.8,
+                }
+            }
+        });
+    }
+};
+
+// ===== Project Filtering (Archive Page) =====
+const initProjectFilters = () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card-v2');
+
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active from all
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                        gsap.fromTo(card, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 });
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+};
+
+// ===== AI Assistant Logic (Production Ready) =====
+const aiWidget = document.getElementById('ai-widget');
+if (aiWidget) {
+    const aiToggle = aiWidget.querySelector('.ai-toggle');
+    const aiClose = aiWidget.querySelector('.ai-close');
+    const aiChatWindow = aiWidget.querySelector('.ai-chat-window');
+    const aiMessages = document.getElementById('ai-messages');
+    const aiInput = document.getElementById('ai-input-field');
+    const aiSend = document.getElementById('ai-send');
+
+    if (aiToggle && aiChatWindow) {
+        aiToggle.addEventListener('click', () => {
+            aiChatWindow.classList.toggle('active');
+        });
+
+        if (aiClose) {
+            aiClose.addEventListener('click', () => {
+                aiChatWindow.classList.remove('active');
+            });
+        }
+
+        const addMessage = (text, type) => {
+            const msg = document.createElement('div');
+            msg.className = `message ${type}`;
+            msg.innerText = text;
+            aiMessages.appendChild(msg);
+            aiMessages.scrollTop = aiMessages.scrollHeight;
+        };
+
+        const handleSend = async () => {
+            const text = aiInput.value.trim();
+            if (!text) return;
+            addMessage(text, 'user');
+            aiInput.value = '';
+            
+            // Show typing indicator or simple delay
+            const typingMsg = document.createElement('div');
+            typingMsg.className = 'message system';
+            typingMsg.innerText = 'Analyzing...';
+            aiMessages.appendChild(typingMsg);
+
+            try {
+                // This would be your secure backend endpoint
+                // const response = await fetch('/api/chat', {
+                //     method: 'POST',
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify({ message: text })
+                // });
+                // const data = await response.json();
+                
+                // MOCK RESPONSE for now
+                setTimeout(() => {
+                    typingMsg.remove();
+                    let response = "That's a great question! Sidhant is currently focused on scaling Atfro.com and building Studio Atfro. He's also deep into AI and System Design.";
+                    if (text.toLowerCase().includes('book')) response = "Sidhant has published 5 books on Amazon Kindle, ranging from psychology to travelogues. You can see them in the 'About' section!";
+                    if (text.toLowerCase().includes('atfro')) response = "Atfro is Sidhant's vision for a decentralized creator ecosystem. Studio Atfro is the flagship product for YouTube growth.";
+                    addMessage(response, 'system');
+                }, 800);
+            } catch (err) {
+                typingMsg.innerText = "Error connecting to Sidhant's AI. Please try again later.";
+            }
+        };
+
+        aiSend.addEventListener('click', handleSend);
+        aiInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleSend();
+        });
+    }
+}
+
+// ===== Initialize All =====
 window.addEventListener("load", () => {
+    initSwiper();
+    initProjectFilters();
     ScrollTrigger.refresh();
 });
 
