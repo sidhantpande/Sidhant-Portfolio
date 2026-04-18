@@ -1,0 +1,19 @@
+{
+  "name": "Sidhant Pande Portfolio",
+  "short_name": "Sidhant",
+  "description": "Founder, Systems Architect & Author. Co-founder of ATFRO.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#020202",
+  "theme_color": "#00ff88",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["portfolio", "education", "business"]
+}

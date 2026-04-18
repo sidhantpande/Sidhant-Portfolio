@@ -300,7 +300,7 @@ const initSwiper = () => {
             slidesPerView: 1.2,
             spaceBetween: 30,
             centeredSlides: true,
-            loop: true,
+            loop: false,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
@@ -352,75 +352,7 @@ const initProjectFilters = () => {
     }
 };
 
-// ===== AI Assistant Logic (Production Ready) =====
-const aiWidget = document.getElementById('ai-widget');
-if (aiWidget) {
-    const aiToggle = aiWidget.querySelector('.ai-toggle');
-    const aiClose = aiWidget.querySelector('.ai-close');
-    const aiChatWindow = aiWidget.querySelector('.ai-chat-window');
-    const aiMessages = document.getElementById('ai-messages');
-    const aiInput = document.getElementById('ai-input-field');
-    const aiSend = document.getElementById('ai-send');
-
-    if (aiToggle && aiChatWindow) {
-        aiToggle.addEventListener('click', () => {
-            aiChatWindow.classList.toggle('active');
-        });
-
-        if (aiClose) {
-            aiClose.addEventListener('click', () => {
-                aiChatWindow.classList.remove('active');
-            });
-        }
-
-        const addMessage = (text, type) => {
-            const msg = document.createElement('div');
-            msg.className = `message ${type}`;
-            msg.innerText = text;
-            aiMessages.appendChild(msg);
-            aiMessages.scrollTop = aiMessages.scrollHeight;
-        };
-
-        const handleSend = async () => {
-            const text = aiInput.value.trim();
-            if (!text) return;
-            addMessage(text, 'user');
-            aiInput.value = '';
-            
-            // Show typing indicator or simple delay
-            const typingMsg = document.createElement('div');
-            typingMsg.className = 'message system';
-            typingMsg.innerText = 'Analyzing...';
-            aiMessages.appendChild(typingMsg);
-
-            try {
-                // This would be your secure backend endpoint
-                // const response = await fetch('/api/chat', {
-                //     method: 'POST',
-                //     headers: { 'Content-Type': 'application/json' },
-                //     body: JSON.stringify({ message: text })
-                // });
-                // const data = await response.json();
-                
-                // MOCK RESPONSE for now
-                setTimeout(() => {
-                    typingMsg.remove();
-                    let response = "That's a great question! Sidhant is currently focused on scaling Atfro.com and building Studio Atfro. He's also deep into AI and System Design.";
-                    if (text.toLowerCase().includes('book')) response = "Sidhant has published 5 books on Amazon Kindle, ranging from psychology to travelogues. You can see them in the 'About' section!";
-                    if (text.toLowerCase().includes('atfro')) response = "Atfro is Sidhant's vision for a decentralized creator ecosystem. Studio Atfro is the flagship product for YouTube growth.";
-                    addMessage(response, 'system');
-                }, 800);
-            } catch (err) {
-                typingMsg.innerText = "Error connecting to Sidhant's AI. Please try again later.";
-            }
-        };
-
-        aiSend.addEventListener('click', handleSend);
-        aiInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') handleSend();
-        });
-    }
-}
+// ===== AI Assistant Logic moved to ai-assistant.js =====
 
 // ===== Initialize All =====
 window.addEventListener("load", () => {
@@ -499,3 +431,71 @@ document.querySelectorAll('.projects-section, .certifications-section').forEach(
         document.body.classList.remove('native-cursor-zone');
     });
 });
+
+
+// ===== Back to Top Logic =====
+const bttButton = document.getElementById('backToTop');
+if (bttButton) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            bttButton.classList.add('visible');
+        } else {
+            bttButton.classList.remove('visible');
+        }
+    });
+
+    bttButton.addEventListener('click', () => {
+        if (!prefersReducedMotion && typeof lenis !== 'undefined') {
+            lenis.scrollTo(0);
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+}
+
+
+// ===== About Page Smooth Animations =====
+function initAboutAnimations() {
+    if (!document.querySelector('.about-page')) return;
+
+    gsap.utils.toArray('.narrative-chapter').forEach((chapter, i) => {
+        const content = chapter.querySelector('.chapter-content');
+        const sidebar = chapter.querySelector('.chapter-sidebar');
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: chapter,
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        tl.fromTo(content, 
+            { opacity: 0, y: 30 }, 
+            { opacity: 1, y: 0, duration: 1, ease: 'expo.out' }
+        );
+
+        if (sidebar) {
+            tl.fromTo(sidebar, 
+                { opacity: 0, scale: 0.95 }, 
+                { opacity: 1, scale: 1, duration: 1, ease: 'expo.out' }, 
+                '-=0.7'
+            );
+        }
+    });
+
+    // Synthesis Card Animation
+    gsap.from('.synthesis-card', {
+        scrollTrigger: {
+            trigger: '.synthesis-card',
+            start: 'top 85%'
+        },
+        opacity: 0,
+        scale: 0.9,
+        duration: 1.5,
+        ease: 'elastic.out(1, 0.75)'
+    });
+}
+
+// Initialize animations
+initAboutAnimations();

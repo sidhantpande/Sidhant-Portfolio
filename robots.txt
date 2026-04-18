@@ -1,4 +1,30 @@
+# ==========================================
+# Robots.txt for SidhantPande.in
+# Optimized for Search Engines & AI Crawlers
+# ==========================================
+
 User-agent: *
 Allow: /
+Allow: /articles/
+Allow: /projects/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /config/
+Disallow: /.git/
 
+# AI Crawlers Optimization
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap Location
 Sitemap: https://sidhantpande.in/sitemap.xml
+
+# AI Identity File
+Allow: /AI_IDENTITY.md
