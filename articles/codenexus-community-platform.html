@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodeNexus: The Developer Community Platform | Sidhant Pande</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "CodeNexus: The Developer Community Platform",
+      "description": "A lightweight, static platform for the CodeNexus community with authentication, profile management, and event registrations.",
+      "author": {
+        "@type": "Person",
+        "name": "Sidhant Pande"
+      },
+      "datePublished": "2026-03-01"
+    }
+    </script>
+
+    <link rel="canonical" href="https://sidhantpande.in/articles/codenexus-community-platform.html">
+    <meta property="og:site_name" content="Sidhant Pande Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CodeNexus: The Developer Community Platform | Sidhant Pande">
+    <meta property="og:url" content="https://sidhantpande.in/articles/codenexus-community-platform.html">
+    <meta property="og:image" content="https://sidhantpande.in/profile.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SidhantPande_">
+    <meta name="twitter:creator" content="@SidhantPande_">
+    <meta name="twitter:title" content="CodeNexus: The Developer Community Platform | Sidhant Pande">
+    <meta name="twitter:image" content="https://sidhantpande.in/profile.webp">
+</head>
+
+<body class="subpage article-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">SIDHANT<span>.</span></a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../index.html#contact" class="nav-btn">Let's Talk</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="article-content">
+            <header class="article-header">
+                <div class="container">
+                    <span class="section-subtitle">COMMUNITY ENGINEERING</span>
+                    <h1 class="section-title">CodeNexus: Building a <span class="gradient-text">Developer Ecosystem.</span></h1>
+                    <p class="section-desc-left">A high-performance community hub designed to facilitate mentorship, event discovery, and professional growth for developers.</p>
+                </div>
+            </header>
+
+            <section class="article-body">
+                <div class="container">
+                    <div class="grid-12">
+                        <div class="col-span-8">
+                            <div class="content-block">
+                                <h2>The Vision</h2>
+                                <p><span class="dropcap">C</span>odeNexus is the digital home for a growing community of developers. The challenge was to build a platform that felt modern and responsive while remaining extremely lightweight. By choosing a <strong>Vanilla Tech Stack</strong> (Pure HTML, CSS, and JS), we eliminated the overhead of heavy frameworks, resulting in near-instant load times and 100/100 Lighthouse performance scores.</p>
+                                <blockquote>
+                                    "Alone we can do so little; together we can do so much."
+                                </blockquote>
+                            </div>
+
+                            <div class="callout callout-info">
+                                <div class="callout-icon"><i class="fas fa-users"></i></div>
+                                <div class="callout-content">
+                                    <h4>Community Growth</h4>
+                                    <p>The platform serves as a central hub for GSOC mentorship and local developer events, streamlining the onboarding process for new members via Firebase Authentication.</p>
+                                </div>
+                            </div>
+
+                            <div class="content-block">
+                                <h2>The Platform Workflow</h2>
+                                <p>CodeNexus focuses on a seamless user journey, from initial sign-in to active event participation and profile building.</p>
+
+                                <div class="flowchart-container">
+                                    <svg viewBox="0 0 600 200" class="flow-svg">
+                                        <defs>
+                                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                                                <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-muted)" />
+                                            </marker>
+                                        </defs>
+                                        <!-- Node 1 -->
+                                        <rect x="20" y="70" width="100" height="60" rx="5" class="flow-node" />
+                                        <text x="70" y="105" text-anchor="middle" class="flow-text" style="font-size: 10px;">AUTH (GOOGLE)</text>
+                                        <line x1="120" y1="100" x2="160" y2="100" class="flow-arrow" />
+
+                                        <!-- Node 2 -->
+                                        <rect x="160" y="70" width="100" height="60" rx="5" class="flow-node" />
+                                        <text x="210" y="105" text-anchor="middle" class="flow-text" style="font-size: 10px;">PROFILE SYNC</text>
+                                        <line x1="260" y1="100" x2="300" y2="100" class="flow-arrow" />
+
+                                        <!-- Node 3 -->
+                                        <rect x="300" y="70" width="100" height="60" rx="5" class="flow-node" />
+                                        <text x="350" y="105" text-anchor="middle" class="flow-text" style="font-size: 10px;">EVENTS</text>
+                                        <line x1="400" y1="100" x2="440" y2="100" class="flow-arrow" />
+
+                                        <!-- Node 4 -->
+                                        <rect x="440" y="70" width="120" height="60" rx="5" class="flow-node" />
+                                        <text x="500" y="105" text-anchor="middle" class="flow-text" style="font-size: 10px;">ENGAGEMENT</text>
+                                    </svg>
+                                </div>
+                                
+                                <h3>Technical Infrastructure</h3>
+                                <ul>
+                                    <li><strong>Firebase Integration:</strong> Real-time data storage for user profiles and event registrations without the need for a managed server.</li>
+                                    <li><strong>Static Optimization:</strong> No build tools or bundlers required, ensuring maximum compatibility and zero-maintenance hosting on Netlify.</li>
+                                    <li><strong>Admin Mastery:</strong> A dedicated admin dashboard for mentors to track registrations, export data, and manage event lifecycles.</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-block">
+                                <h2>Mentorship & Events</h2>
+                                <p>A core pillar of CodeNexus is the <strong>GSOC Preparation Program</strong>. We built dedicated modules for tracking mentorship sessions and managing bulk student data through an optimized JSON intake system in the admin panel.</p>
+                                <ul>
+                                    <li><strong>Secure SSO:</strong> Domain-restricted authentication for official organization members.</li>
+                                    <li><strong>Data Portability:</strong> One-click CSV/JSON exports for event analytics.</li>
+                                    <li><strong>Responsive Core:</strong> A mobile-first UI that ensures community accessibility on any device.</li>
+                                </ul>
+                            </div>
+
+                            <div style="margin-top: 5rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                                <a href="../blog.html" class="back-link">← Return to Blog</a>
+                            </div>
+                        </div>
+
+                        <aside class="col-span-4 article-sidebar">
+                            <div class="sidebar-card glass">
+                                <h3>Project Context</h3>
+                                <ul class="clean-list">
+                                    <li><strong>Category:</strong> Community / DevOps</li>
+                                    <li><strong>Lead:</strong> Sidhant Pande</li>
+                                    <li><strong>Stack:</strong> JS, Netlify, JSON</li>
+                                    <li><strong>Scale:</strong> 400+ Attendees</li>
+                                </ul>
+                            </div>
+
+                            <div class="sidebar-card glass">
+                                <h3>Project Assets</h3>
+                                <div class="sidebar-links">
+                                    <a href="https://github.com/vstopensource-gif/CodeNexus-Website" target="_blank" class="sidebar-link-item">
+                                        <i class="fab fa-github"></i>
+                                        <span>Website Core</span>
+                                    </a>
+                                    <a href="https://github.com/vstopensource-gif/CodeNexus-Admin" target="_blank" class="sidebar-link-item">
+                                        <i class="fab fa-github"></i>
+                                        <span>Admin System</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cta-block reveal-up">
+                <h2 class="footer-cta-title">Have a project in <span class="gradient-text">mind?</span></h2>
+                <p class="footer-cta-desc">I am currently accepting new projects and consulting engagements. Let's build something exceptional together.</p>
+                <a href="../index.html#contact" class="btn btn-primary">Start A Conversation <i class="fas fa-paper-plane"></i></a>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../blog.html">Blog / Writing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Social</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://x.com/SidhantPande_" target="_blank">Twitter / X</a></li>
+                        <li><a href="https://linkedin.com/in/sidhantpande" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Sidhant185" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sidhant Pande. Architecting Excellence.</p>
+                <div class="footer-socials">
+                    <a href="https://x.com/SidhantPande_" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/sidhantpande" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Sidhant185" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
