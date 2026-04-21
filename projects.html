@@ -4,8 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Project Archive | Sidhant Pande</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Archive of selected engineering projects, full-stack applications, and technical experiments by Sidhant Pande. Focus on AI, Systems, and Scalability.">
+    <meta name="keywords" content="Portfolio, Projects, Systems Architect, React, AI, Firebase, Next.js, Engineering, Sidhant Pande">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sidhantpande.in/projects.html">
+    <meta property="og:url" content="https://sidhantpande.in/projects.html">
+    <meta property="og:site_name" content="Sidhant Pande Portfolio">
+    <meta property="og:image" content="https://sidhantpande.in/profile.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SidhantPande_">
+    <meta name="twitter:creator" content="@SidhantPande_">
+    <meta name="twitter:title" content="Project Archive | Sidhant Pande">
+    <meta name="twitter:description" content="Archive of selected engineering projects, full-stack applications, and technical experiments by Sidhant Pande.">
+    <meta name="twitter:image" content="https://sidhantpande.in/profile.webp">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://sidhantpande.in/#person",
+          "name": "Sidhant Pande",
+          "jobTitle": "CEO & Systems Architect",
+          "url": "https://sidhantpande.in",
+          "sameAs": [
+            "https://github.com/Sidhant185",
+            "https://linkedin.com/in/sidhantpande"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://atfro.com/#organization",
+          "name": "ATFRO",
+          "url": "https://atfro.com",
+          "founder": { "@id": "https://sidhantpande.in/#person" },
+          "slogan": "The Brand That Builds Brands"
+        }
+      ]
+    }
+    </script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -20,6 +60,8 @@
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="blog.html">Blog</a>
                 <a href="index.html#contact" class="nav-btn">Let's Talk</a>
             </div>
         </div>
@@ -48,31 +90,31 @@
         <section class="projects-grid-section">
             <div class="container">
                 <div class="projects-grid-v2">
-                    <!-- Project 1 -->
+                    <!-- Project 1: Atfro Studio -->
                     <div class="project-card-v2 web" data-category="web">
                         <div class="pc-content">
-                            <span class="pc-tag">STARTUP FOUNDER</span>
-                            <h3>Atfro — Creator Ecosystem</h3>
-                            <p>Decentralized infrastructure for content creators. End-to-end product architecture and growth.</p>
-                            <a href="https://atfro.com" target="_blank" class="pc-link">Visit atfro.com →</a>
+                            <span class="pc-tag">FLAGSHIP PRODUCT</span>
+                            <h3>Atfro Studio</h3>
+                            <p>Next.js 16 Social Media Dashboard. High-performance YouTube API ingestion with Postgres caching.</p>
+                            <a href="articles/atfro-studio-social-dashboard.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
-                    <!-- Project 2 -->
+                    <!-- Project 2: NOVA -->
                     <div class="project-card-v2 ai" data-category="ai">
                         <div class="pc-content">
                             <span class="pc-tag">AI Assistant</span>
                             <h3>NOVA AI</h3>
                             <p>Voice-enabled intelligent companion with emotional intelligence and proactive care.</p>
-                            <a href="projects/nova-ai.html" class="pc-link">Explore Case Study →</a>
+                            <a href="articles/nova-ai-intelligent-companion.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
-                    <!-- Project 3 -->
+                    <!-- Project 3: JARVIS -->
                     <div class="project-card-v2 ai" data-category="ai">
                         <div class="pc-content">
                             <span class="pc-tag">Automation</span>
                             <h3>JARVIS AI</h3>
                             <p>Autonomous holographic assistant with real-time web intelligence and automation.</p>
-                            <a href="projects/jarvis-ai.html" class="pc-link">Explore Case Study →</a>
+                            <a href="articles/jarvis-ai-holographic-system.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
                     <!-- Project 4 -->
@@ -81,7 +123,7 @@
                             <span class="pc-tag">EdTech Platform</span>
                             <h3>Study Buddy</h3>
                             <p>AI-powered learning ecosystem for university students. Monaco Editor, Gemini 2.0 AI.</p>
-                            <a href="projects/study-buddy.html" class="pc-link">View Project →</a>
+                            <a href="articles/study-buddy-ai-learning-ecosystem.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
                     <!-- Project 5 -->
@@ -90,52 +132,52 @@
                             <span class="pc-tag">E-Commerce</span>
                             <h3>Sattvahar Foods</h3>
                             <p>Full-stack digital commerce platform for organic food products. Custom back-office tooling.</p>
-                            <a href="https://sattvahar.in" target="_blank" class="pc-link">Visit Site →</a>
+                            <a href="articles/sattvahar-full-stack-ecommerce-architecture.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
                     <!-- Project 6 -->
                     <div class="project-card-v2 client" data-category="client">
                         <div class="pc-content">
-                            <span class="pc-tag">Event Tech</span>
+                            <span class="pc-tag">Community Hub</span>
                             <h3>Code Nexus</h3>
                             <p>High-conversion portal for major tech events and admin dashboard (400+ attendees).</p>
-                            <a href="projects/code-nexus.html" class="pc-link">View Details →</a>
+                            <a href="articles/codenexus-community-platform.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
-                    <!-- Project 7 -->
+                    <!-- Project 7: VST Admin -->
                     <div class="project-card-v2 web" data-category="web">
                         <div class="pc-content">
                             <span class="pc-tag">Enterprise Dashboard</span>
                             <h3>VST Admin Dashboard</h3>
                             <p>Comprehensive admin dashboard for tracking student progress and GitHub contributions.</p>
-                            <a href="projects/vst-admin-dashboard.html" class="pc-link">View Project →</a>
+                            <a href="articles/react-firebase-admin-dashboard-architecture.html" class="pc-link">View Case Study →</a>
                         </div>
                     </div>
                     <!-- Project 8 -->
                     <div class="project-card-v2 web" data-category="web">
                         <div class="pc-content">
-                            <span class="pc-tag">Student Platform</span>
-                            <h3>VST Student Website</h3>
-                            <p>User-facing platform for the university club — sharing resources, events, and onboarding.</p>
-                            <a href="projects/vst-student-website.html" class="pc-link">View Project →</a>
+                            <span class="pc-tag">Community Hub</span>
+                            <h3>Vedam Open Source</h3>
+                            <p>Architecting the digital face of Vedam's open-source movement for student onboarding.</p>
+                            <a href="articles/vedam-open-source-community-hub.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
-                    <!-- Project 9 -->
+                    <!-- Project 9: E-Sports -->
                     <div class="project-card-v2 web" data-category="web">
                         <div class="pc-content">
                             <span class="pc-tag">E-Sports</span>
                             <h3>E-Sports Platform (BGMI)</h3>
                             <p>Competitive gaming platform with tournament brackets, team registrations, and leaderboards.</p>
-                            <a href="projects/esports-platform.html" class="pc-link">View Project →</a>
+                            <a href="articles/building-an-esports-platform-with-threejs-and-firebase.html" class="pc-link">View Case Study →</a>
                         </div>
                     </div>
                     <!-- Project 10 -->
-                    <div class="project-card-v2 web" data-category="web">
+                    <div class="project-card-v2 ai" data-category="ai">
                         <div class="pc-content">
-                            <span class="pc-tag">Utility Tool</span>
-                            <h3>Time-Table Generator</h3>
-                            <p>Automated scheduling app using algorithmic logic to generate conflict-free academic timetables.</p>
-                            <a href="projects/timetable-generator.html" class="pc-link">View Project →</a>
+                            <span class="pc-tag">AI Scheduling</span>
+                            <h3>Timetable AI (NOVA v4)</h3>
+                            <p>Automated scheduling engine using cognitive AI to generate burnout-aware academic timetables.</p>
+                            <a href="articles/nova-v4-timetable-ai-scheduling.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
                     <!-- Project 11 -->
@@ -143,8 +185,8 @@
                         <div class="pc-content">
                             <span class="pc-tag">Tech Fest</span>
                             <h3>Noesis Techfest</h3>
-                            <p>Official digital hub for the annual tech fest — centralising schedules, resources, and live updates.</p>
-                            <a href="projects/noesis-techfest.html" class="pc-link">View Details →</a>
+                            <p>Scaling digital experiences for 1000+ attendees with real-time scheduling and registration flows.</p>
+                            <a href="articles/noesis-techfest-digital-infrastructure.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
                     <!-- Project 12 -->
@@ -152,8 +194,8 @@
                         <div class="pc-content">
                             <span class="pc-tag">Production Live</span>
                             <h3>Cultural Club Website</h3>
-                            <p>Official platform for college events — live and actively used by hundreds of students.</p>
-                            <a href="projects/cultural-club.html" class="pc-link">View Details →</a>
+                            <p>A media-rich platform designed to capture campus energy through visual storytelling and live event sync.</p>
+                            <a href="articles/cultural-club-immersive-experience.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
                     <!-- Project 13 -->
@@ -161,8 +203,8 @@
                         <div class="pc-content">
                             <span class="pc-tag">Paid Client</span>
                             <h3>Client Portfolio</h3>
-                            <p>Custom UI/UX designed and delivered end-to-end for a paying client.</p>
-                            <a href="projects/client-portfolio.html" class="pc-link">View Details →</a>
+                            <p>Engineering a high-performance digital identity for professional clients with rank-ready SEO.</p>
+                            <a href="articles/premium-client-portfolio-bespoke-design.html" class="pc-link">Explore Case Study →</a>
                         </div>
                     </div>
                 </div>
@@ -171,17 +213,49 @@
     </main>
 
     <footer class="footer">
-        <div class="container footer-container-v2">
+        <div class="container">
+            <div class="footer-cta-block reveal-up">
+                <h2 class="footer-cta-title">Have a project in <span class="gradient-text">mind?</span></h2>
+                <p class="footer-cta-desc">I am currently accepting new projects and consulting engagements. Let's build something exceptional together.</p>
+                <a href="index.html#contact" class="btn btn-primary">Start A Conversation <i class="fas fa-paper-plane"></i></a>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog / Writing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Social</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://x.com/SidhantPande_" target="_blank">Twitter / X</a></li>
+                        <li><a href="https://linkedin.com/in/sidhantpande" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Sidhant185" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2026 Sidhant Pande. Built for the future.</p>
+                <p>&copy; 2026 Sidhant Pande. Architecting Excellence.</p>
                 <div class="footer-socials">
-                    <a href="https://x.com/sidhantpande_" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://linkedin.com/in/sidhantpande" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/sidhantpande" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/SidhantPande_" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/sidhantpande" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Sidhant185" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
     </footer>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
