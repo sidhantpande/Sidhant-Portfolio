@@ -1,180 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Building a Real-Time E-Sports Platform with Three.js and Firebase | Sidhant Pande Blog</title>
-    <!-- Meta tags for SEO -->
-    <meta name="description" content="An architectural breakdown of how I built an immersive, high-performance esports tournament system capable of handling hundreds of concurrent players.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://sidhantpande.in/articles/building-an-esports-platform-with-threejs-and-firebase.html">
+    <title>Building a Real-Time E-Sports Platform with Three.js and Firebase | Sidhant Pande</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
     
-    <!-- Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Building a Real-Time E-Sports Platform with Three.js and Firebase">
-    <meta property="og:description" content="An architectural breakdown of how I built an immersive, high-performance esports tournament system capable of handling hundreds of concurrent players.">
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "Building a Real-Time E-Sports Platform with Three.js and Firebase",
-      "description": "An architectural breakdown of how I built an immersive, high-performance esports tournament system capable of handling hundreds of concurrent players.",
       "author": {
         "@type": "Person",
-        "name": "Sidhant Pande",
-        "url": "https://sidhantpande.in"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://sidhantpande.in/articles/building-an-esports-platform-with-threejs-and-firebase.html"
+        "name": "Sidhant Pande"
       },
       "datePublished": "2026-03-11"
     }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="../style.css">
-    
-    <style>
-        .article-page-header {
-            padding: 180px 0 60px;
-            background: var(--bg-dark);
-            border-bottom: 1px solid var(--border);
-        }
-        .article-page-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            line-height: 1.1;
-            font-weight: 900;
-            color: var(--text-main);
-            margin-bottom: 1.5rem;
-            max-width: 900px;
-        }
-        .article-page-meta {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            align-items: center;
-        }
-        .article-author {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-        .article-author img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-            filter: grayscale(100%);
-        }
-        .article-page-body {
-            padding: 80px 0;
-            max-width: 750px;
-            margin: 0 auto;
-        }
-        .article-page-body p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--text-dim);
-            margin-bottom: 2rem;
-        }
-        .article-page-body h3 {
-            font-family: var(--font-outfit);
-            color: var(--text-main);
-            margin: 3.5rem 0 1.5rem;
-            font-size: 2rem;
-            letter-spacing: -0.02em;
-        }
-        .article-page-body ul {
-            margin-bottom: 2.5rem;
-            padding-left: 1.5rem;
-        }
-        .article-page-body li {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: var(--text-dim);
-            margin-bottom: 1rem;
-        }
-        .article-page-body strong {
-            color: var(--text-main);
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 4rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-main);
-            text-decoration: none;
-            border-bottom: 1px solid var(--text-main);
-            padding-bottom: 0.2rem;
-            transition: color 0.3s;
-        }
-        .back-link:hover {
-            color: var(--primary-light);
-            border-color: var(--primary-light);
-        }
-    </style>
+    <link rel="canonical" href="https://sidhantpande.in/articles/building-an-esports-platform-with-threejs-and-firebase.html">
+    <meta property="og:site_name" content="Sidhant Pande Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Building a Real-Time E-Sports Platform with Three.js and Firebase | Sidhant Pande">
+    <meta property="og:url" content="https://sidhantpande.in/articles/building-an-esports-platform-with-threejs-and-firebase.html">
+    <meta property="og:image" content="https://sidhantpande.in/profile.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SidhantPande_">
+    <meta name="twitter:creator" content="@SidhantPande_">
+    <meta name="twitter:title" content="Building a Real-Time E-Sports Platform with Three.js and Firebase | Sidhant Pande">
+    <meta name="twitter:image" content="https://sidhantpande.in/profile.webp">
 </head>
-<body style="background: var(--bg-dark);">
-    <nav class="navbar" style="position: absolute;">
+
+<body class="subpage article-page">
+    <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo">SIDHANT<span>.</span></a>
             <div class="nav-links">
-                <a href="../index.html" class="nav-btn-outline" style="border: none !important;">Back to Portfolio</a>
+                <a href="../index.html">Home</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../index.html#contact" class="nav-btn">Let's Talk</a>
             </div>
         </div>
     </nav>
-    <main>
-        <header class="article-page-header">
-            <div class="container" style="max-width: 900px; margin: 0 auto;">
-                <span class="badge" style="margin-bottom: 2rem; display: inline-block;">TECHNICAL DEEP DIVE</span>
-                <h1 class="article-page-title">Building a Real-Time E-Sports Platform with Three.js and Firebase</h1>
-                <div class="article-page-meta">
-                    <div class="article-author">
-                        <img src="../profile.webp" alt="Sidhant Pande">
-                        <span>Sidhant Pande</span>
-                    </div>
-                    <span>•</span>
-                    <span>March 11, 2026</span>
-                    <span>•</span>
-                    <span>5 min read</span>
-                </div>
-            </div>
-        </header>
-        <section class="article-page-body">
-            <div class="container" style="max-width: 750px;">
-                <p><strong style="font-size: 1.3rem; color: var(--text-main); line-height: 1.6;">An architectural breakdown of how I built an immersive, high-performance esports tournament system capable of handling hundreds of concurrent players.</strong></p>
-                
-                
-            <p>Esports platforms require an incredibly unique architecture. You aren't just serving forms; you are serving real-time brackets, interactive 3D elements, and glitch-free audio experiences simultaneously. For the <strong>Haunt the Arena</strong> tournament, I decided to push the boundaries of WebGL and serverless databases.</p>
-            
-            <h3>The Architecture Breakdown</h3>
-            <p>The core philosophy behind the tech stack was <em>zero-compromise execution</em>. I needed a system that wouldn't crash when 150+ teams hammered the registration API exactly when the countdown hit zero.</p>
-            
-            <ul>
-                <li><strong>Frontend Engine:</strong> A completely custom HTML5/CSS3 layer overlaid on top of a Three.js canvas. The floating particle background creates immediate immersion.</li>
-                <li><strong>Real-Time Sync:</strong> Firebase Firestore was the obvious choice for the bracket system. As an admin updates a match result, the bracket UI instantly updates across all connected clients via Firestore's WebSocket integration.</li>
-                <li><strong>Security:</strong> Firebase Authentication ensures that team captains can only edit their own roster details.</li>
-            </ul>
 
-            <h3>Handling 3D Performance</h3>
-            <p>Using Three.js on a landing page is risky because of mobile performance. I implemented an intersection observer that pauses the WebGL rendering loop whenever the canvas is scrolled out of view, saving battery life and keeping the UI buttery smooth.</p>
-            
-            <p>Building platforms like this proves that the gap between a standard "web page" and an immersive "digital experience" is purely architectural.</p>
-        
-                
-                <div style="margin-top: 5rem; border-top: 1px solid var(--border); padding-top: 2rem;">
-                    <a href="../index.html" class="back-link">← Return to Portfolio</a>
+    <main>
+        <article class="article-content">
+            <header class="article-header">
+                <div class="container">
+                    <span class="section-subtitle">TECHNICAL DEEP DIVE</span>
+                    <h1 class="section-title">Building a Real-Time E-Sports Platform with <span class="gradient-text">Three.js and Firebase.</span></h1>
+                    <p class="section-desc-left">An architectural breakdown of how I built an immersive, high-performance esports tournament system.</p>
+                </div>
+            </header>
+
+            <section class="article-body">
+                <div class="container">
+                    <div class="grid-12">
+                        <div class="col-span-8">
+                            <div class="content-block">
+                                <p><span class="dropcap">E</span>sports platforms require an incredibly unique architecture. You aren't just serving forms; you are serving real-time brackets, interactive 3D elements, and glitch-free audio experiences simultaneously. For the <strong>Haunt the Arena</strong> tournament, I decided to push the boundaries of WebGL and serverless databases.</p>
+                                <blockquote>
+                                    "Architecture is the difference between a website that works and a platform that scale."
+                                </blockquote>
+                            </div>
+
+                            <div class="callout callout-info">
+                                <div class="callout-icon"><i class="fas fa-bolt"></i></div>
+                                <div class="callout-content">
+                                    <h4>Performance First</h4>
+                                    <p>The platform maintains a steady 60FPS by pausing the WebGL loop when out of view and using optimized low-poly shaders.</p>
+                                </div>
+                            </div>
+
+                            <div class="content-block">
+                                <h2>Real-Time Architecture</h2>
+                                <p>The system relies on a reactive data pipeline that ensures tournament brackets update instantly across thousands of concurrent users.</p>
+
+                                <div class="flowchart-container">
+                                    <svg viewBox="0 0 600 200" class="flow-svg">
+                                        <defs>
+                                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                                                <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-muted)" />
+                                            </marker>
+                                        </defs>
+                                        <!-- Node 1 -->
+                                        <rect x="20" y="75" width="100" height="50" rx="5" class="flow-node" />
+                                        <text x="70" y="105" text-anchor="middle" class="flow-text">ADMIN ACTION</text>
+                                        <line x1="120" y1="100" x2="160" y2="100" class="flow-arrow" />
+
+                                        <!-- Node 2 -->
+                                        <rect x="160" y="75" width="120" height="50" rx="5" class="flow-node" />
+                                        <text x="220" y="105" text-anchor="middle" class="flow-text">FIRESTORE</text>
+                                        <line x1="280" y1="100" x2="320" y2="100" class="flow-arrow" />
+
+                                        <!-- Node 3 -->
+                                        <rect x="320" y="75" width="120" height="50" rx="5" class="flow-node" />
+                                        <text x="380" y="105" text-anchor="middle" class="flow-text">WEB SOCKET</text>
+                                        <line x1="440" y1="100" x2="480" y2="100" class="flow-arrow" />
+
+                                        <!-- Node 4 -->
+                                        <rect x="480" y="75" width="100" height="50" rx="5" class="flow-node" />
+                                        <text x="530" y="105" text-anchor="middle" class="flow-text">CLIENT UI</text>
+                                    </svg>
+                                </div>
+                                
+                                <h3>The Architecture Breakdown</h3>
+                                <p>The core philosophy behind the tech stack was <em>zero-compromise execution</em>. I needed a system that wouldn't crash when 150+ teams hammered the registration API exactly when the countdown hit zero.</p>
+                                
+                                <ul>
+                                    <li><strong>Frontend Engine:</strong> A completely custom HTML5/CSS3 layer overlaid on top of a Three.js canvas. The floating particle background creates immediate immersion.</li>
+                                    <li><strong>Real-Time Sync:</strong> Firebase Firestore was the obvious choice for the bracket system. As an admin updates a match result, the bracket UI instantly updates across all connected clients.</li>
+                                    <li><strong>Security:</strong> Firebase Authentication ensures that team captains can only edit their own roster details.</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-block">
+                                <h3>Handling 3D Performance</h3>
+                                <p>Using Three.js on a landing page is risky because of mobile performance. I implemented an intersection observer that pauses the WebGL rendering loop whenever the canvas is scrolled out of view, saving battery life.</p>
+                                
+                                <p>Additionally, we used low-polygon models and custom shaders to maintain a stable 60FPS even on older mobile devices. The visual fidelity was maintained through clever use of post-processing effects like Bloom and Chromatic Aberration.</p>
+                            </div>
+
+                            <div class="content-block">
+                                <h3>The Outcome</h3>
+                                <p>The platform successfully hosted over 200 participants across 48 teams without a single second of downtime. Building platforms like this proves that the gap between a standard "web page" and an immersive "digital experience" is purely architectural.</p>
+                            </div>
+                        
+                            <div style="margin-top: 5rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                                <a href="../blog.html" class="back-link">← Return to Blog</a>
+                            </div>
+                        </div>
+
+                        <aside class="col-span-4 article-sidebar">
+                            <div class="sidebar-card glass">
+                                <h3>Project Context</h3>
+                                <ul class="clean-list">
+                                    <li><strong>Category:</strong> E-Sports / Gaming</li>
+                                    <li><strong>Engineer:</strong> Sidhant Pande</li>
+                                    <li><strong>Stack:</strong> Three.js, Firebase, GSAP</li>
+                                    <li><strong>Status:</strong> Success (200+ Users)</li>
+                                </ul>
+                            </div>
+
+                            <div class="sidebar-card glass">
+                                <h3>Project Assets</h3>
+                                <div class="sidebar-links">
+                                    <a href="https://github.com/Sidhant185/E-sports-Website-Bgmi" target="_blank" class="sidebar-link-item">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cta-block reveal-up">
+                <h2 class="footer-cta-title">Have a project in <span class="gradient-text">mind?</span></h2>
+                <p class="footer-cta-desc">I am currently accepting new projects and consulting engagements. Let's build something exceptional together.</p>
+                <a href="../index.html#contact" class="btn btn-primary">Start A Conversation <i class="fas fa-paper-plane"></i></a>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../blog.html">Blog / Writing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Social</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://x.com/SidhantPande_" target="_blank">Twitter / X</a></li>
+                        <li><a href="https://linkedin.com/in/sidhantpande" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Sidhant185" target="_blank">GitHub</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </main>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sidhant Pande. Architecting Excellence.</p>
+                <div class="footer-socials">
+                    <a href="https://x.com/SidhantPande_" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/sidhantpande" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Sidhant185" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
