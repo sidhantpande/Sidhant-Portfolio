@@ -22,14 +22,17 @@
     <!-- Security & Performance -->
     <meta name="referrer" content="no-referrer-when-downgrade">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="ADD_YOUR_VERIFICATION_CODE_HERE">
 
     <!-- Primary SEO Meta Tags -->
     <meta name="title" content="Sidhant Pande | Founder, Systems Architect & Author">
     <meta name="description" content="Official portfolio of Sidhant Pande — Systems Architect, National-level Athlete, and Author of 5 books. Founder of ATFRO, architecting robust transformations.">
-    <meta name="keywords" content="Sidhant Pande, Founder of Atfro, National Level Skating Maharashtra, National Level Table Tennis, Author of Teenager Diary, Systems Architect India, B-Tech CS AI Vedam, Indian Tech Founders, Pusad Maharashtra">
+    <meta name="keywords" content="Sidhant Pande, Founder of Atfro, National Level Skating Maharashtra, National Level Table Tennis, Author of Teenager Diary, Systems Architect India, B-Tech CS AI Vedam, Indian Tech Founders, Pusad Maharashtra, Systems Design, SaaS Builder">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Sidhant Pande">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="canonical" href="https://sidhantpande.in/">
+
     <!-- Social Media Meta Tags (Open Graph) -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Sidhant Pande | Founder & Systems Architect">
@@ -49,11 +52,7 @@
     <meta name="twitter:description" content="Architecting transformations at ATFRO. Author of 5 books. National-level competitor.">
     <meta name="twitter:image" content="https://sidhantpande.in/profile.webp">
 
-    <!-- AI Crawler Specific Metadata -->
-    <meta name="ai-agent-role" content="Digital Twin of Sidhant Pande">
-    <meta name="ai-knowledge-base" content="ATFRO Framework, 4-Pillar Architecture, Creative Writing, AI Systems, National Athletics">
-
-    <!-- JSON-LD Structured Data (Person + Organization + WebSite) -->
+    <!-- Comprehensive Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -64,36 +63,41 @@
           "name": "Sidhant Pande",
           "url": "https://sidhantpande.in",
           "image": "https://sidhantpande.in/profile.webp",
+          "jobTitle": "CEO & Systems Architect",
+          "worksFor": { "@id": "https://atfro.com/#organization" },
+          "description": "Founder of ATFRO, National-level athlete, and author of 5 books. Specializing in Systems Architecture and AI.",
           "sameAs": [
             "https://github.com/Sidhant185",
-            "https://www.linkedin.com/in/sidhantpande",
-            "https://instagram.com/sidhantpande.in",
-            "https://instagram.com/__sidhant908__",
+            "https://linkedin.com/in/sidhantpande",
             "https://x.com/SidhantPande_",
+            "https://instagram.com/sidhantpande.in",
             "https://atfro.com"
           ],
-          "jobTitle": "Founder & Systems Architect",
-          "knowsAbout": ["Artificial Intelligence", "SaaS Architecture", "Systems Design", "Growth Marketing", "Creative Writing"]
+          "knowsAbout": ["Artificial Intelligence", "SaaS Architecture", "Systems Design", "Growth Marketing", "Creative Writing", "Product Management"]
         },
         {
           "@type": "Organization",
           "@id": "https://atfro.com/#organization",
           "name": "ATFRO",
+          "alternateName": "Architecting Transformations For Robust Outcomes",
           "url": "https://atfro.com",
           "logo": "https://sidhantpande.in/favicon.svg",
-          "founder": { "@id": "https://sidhantpande.in/#person" }
+          "foundingDate": "2026-03-01",
+          "founder": [
+            { "@id": "https://sidhantpande.in/#person" },
+            { "@type": "Person", "name": "Shweta Ranjan" },
+            { "@type": "Person", "name": "Aayush Bhatt" },
+            { "@type": "Person", "name": "Navneet Singh" },
+            { "@type": "Person", "name": "Aayush Prakash" }
+          ],
+          "slogan": "The Brand That Builds Brands"
         },
         {
           "@type": "WebSite",
           "@id": "https://sidhantpande.in/#website",
           "url": "https://sidhantpande.in",
           "name": "Sidhant Pande Portfolio",
-          "publisher": { "@id": "https://sidhantpande.in/#person" },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://sidhantpande.in/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
+          "publisher": { "@id": "https://sidhantpande.in/#person" }
         }
       ]
     }
@@ -119,6 +123,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap">
     <link rel="preload" as="image" href="profile.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
@@ -127,17 +134,15 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main Navigation">
         <div class="nav-container">
-            <a href="#hero" class="logo">SIDHANT<span>.</span></a>
-            <div class="nav-links" id="nav-primary">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#articles">Writing</a>
-                <a href="#books">Books</a>
-                <a href="#contact" class="nav-btn">Let's Talk</a>
+            <a href="index.html" class="logo">SIDHANT<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html">Blog</a>
+                <a href="index.html#contact" class="nav-btn">Let's Talk</a>
             </div>
             <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-controls="nav-primary"
                 aria-expanded="false">
@@ -161,8 +166,7 @@
                             </h1>
                             <p class="hero-description">
                                 Building the future of systems at <a href="https://atfro.com" target="_blank"
-                                    class="inline-link">Atfro.com</a> and <a href="https://studio.atfro.com"
-                                    target="_blank" class="inline-link">Studio Atfro</a>.
+                                    class="inline-link">ATFRO</a>. Building SaaS solutions and developer tools.
                                 Pursuing B-Tech in AI. Author of 5 books. National-level competitor.
                             </p>
                         </div>
@@ -177,9 +181,6 @@
                                 <div class="venture-links">
                                     <a href="https://atfro.com" target="_blank" class="venture-item">
                                         <i class="fas fa-globe"></i> atfro.com
-                                    </a>
-                                    <a href="https://studio.atfro.com" target="_blank" class="venture-item">
-                                        <i class="fas fa-chart-line"></i> studio.atfro.com
                                     </a>
                                 </div>
                             </div>
@@ -217,10 +218,9 @@
                         <span class="section-subtitle">WHO I AM</span>
                         <h2 class="section-title">A Multi-Dimensional <span class="gradient-text">Innovator.</span></h2>
                         <div class="about-highlights">
-                            <ul class="clean-list">
+                            <ul class="clean-list feature-list">
                                 <li><i class="fas fa-rocket"></i> <strong>Founder</strong> — Architecting the future at
-                                    <strong>Atfro.com</strong> and <strong>Studio Atfro</strong>. Building SaaS
-                                    solutions and developer tools.
+                                    ATFRO. Building SaaS solutions and developer tools.
                                 </li>
                                 <li><i class="fas fa-microchip"></i> <strong>Developer</strong> — Pursuing B-Tech in CS
                                     (AI). Full-stack engineer with 15+ shipped projects across AI and Web3.</li>
@@ -635,15 +635,11 @@
                         <div class="swiper-slide">
                             <div class="case-study-item">
                                 <div class="case-info">
-                                    <span class="case-badge">VENTURE FOUNDER</span>
-                                    <h3 class="case-title">ATFRO — Architecting Transformations</h3>
-                                    <p class="case-desc">A service-based transformation company building integrated
-                                        systems for startups to scale their operations and brand. Managing end-to-end product architecture and growth strategy.</p>
+                                    <span class="case-badge">FLAGSHIP PRODUCT</span>
+                                    <h3 class="case-title">Atfro Studio — Creator Dashboard</h3>
+                                    <p class="case-desc">A high-performance Next.js fullstack SaaS built for YouTube content creators. Built as a core product under the <strong>ATFRO</strong> venture.</p>
                                     <div class="case-links">
-                                        <a href="https://atfro.com" target="_blank" class="btn btn-secondary">Visit
-                                            atfro.com</a>
-                                        <a href="https://studio.atfro.com" target="_blank"
-                                            class="btn btn-secondary">Visit studio.atfro.com</a>
+                                        <a href="articles/atfro-studio-social-dashboard.html" class="btn btn-secondary">Explore Platform Architecture →</a>
                                     </div>
                                 </div>
                                 <div class="case-visual">
@@ -661,60 +657,64 @@
                                             </defs>
                                             <!-- Background glow -->
                                             <ellipse cx="240" cy="160" rx="200" ry="140" fill="url(#g1)" />
-                                            <!-- Grid lines -->
-                                            <line x1="0" y1="80" x2="480" y2="80" stroke="#00ff88" stroke-opacity="0.08"
-                                                stroke-width="1" />
-                                            <line x1="0" y1="160" x2="480" y2="160" stroke="#00ff88"
-                                                stroke-opacity="0.08" stroke-width="1" />
-                                            <line x1="0" y1="240" x2="480" y2="240" stroke="#00ff88"
-                                                stroke-opacity="0.08" stroke-width="1" />
-                                            <line x1="120" y1="0" x2="120" y2="320" stroke="#00ff88"
-                                                stroke-opacity="0.08" stroke-width="1" />
-                                            <line x1="240" y1="0" x2="240" y2="320" stroke="#00ff88"
-                                                stroke-opacity="0.08" stroke-width="1" />
-                                            <line x1="360" y1="0" x2="360" y2="320" stroke="#00ff88"
-                                                stroke-opacity="0.08" stroke-width="1" />
                                             <!-- Central node -->
-                                            <circle cx="240" cy="160" r="36" fill="none" stroke="#00ff88"
-                                                stroke-width="1.5" stroke-opacity="0.6" />
+                                            <circle cx="240" cy="160" r="36" fill="none" stroke="#00ff88" stroke-width="1.5" stroke-opacity="0.6" />
                                             <circle cx="240" cy="160" r="24" fill="url(#lg1)" fill-opacity="0.2" />
-                                            <text x="240" y="165" font-size="16" fill="#00ff88" text-anchor="middle"
-                                                font-family="monospace" font-weight="bold">A</text>
+                                            <text x="240" y="165" font-size="16" fill="#00ff88" text-anchor="middle" font-family="monospace" font-weight="bold">A</text>
                                             <!-- Orbiting nodes -->
-                                            <circle cx="140" cy="100" r="16" fill="none" stroke="#00ff88"
-                                                stroke-width="1" stroke-opacity="0.5" />
-                                            <text x="140" y="104" font-size="9" fill="#00ff88" text-anchor="middle"
-                                                font-family="monospace" opacity="0.8">STUDIO</text>
-                                            <line x1="240" y1="160" x2="140" y2="100" stroke="#00ff88"
-                                                stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4,4" />
-                                            <circle cx="350" cy="100" r="16" fill="none" stroke="#00ff88"
-                                                stroke-width="1" stroke-opacity="0.5" />
-                                            <text x="350" y="104" font-size="9" fill="#00ff88" text-anchor="middle"
-                                                font-family="monospace" opacity="0.8">DATA</text>
-                                            <line x1="240" y1="160" x2="350" y2="100" stroke="#00ff88"
-                                                stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4,4" />
-                                            <circle cx="140" cy="220" r="16" fill="none" stroke="#00ff88"
-                                                stroke-width="1" stroke-opacity="0.5" />
-                                            <text x="140" y="224" font-size="9" fill="#00ff88" text-anchor="middle"
-                                                font-family="monospace" opacity="0.8">API</text>
-                                            <line x1="240" y1="160" x2="140" y2="220" stroke="#00ff88"
-                                                stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4,4" />
-                                            <circle cx="350" cy="220" r="16" fill="none" stroke="#00ff88"
-                                                stroke-width="1" stroke-opacity="0.5" />
-                                            <text x="350" y="224" font-size="9" fill="#00ff88" text-anchor="middle"
-                                                font-family="monospace" opacity="0.8">AUTH</text>
-                                            <line x1="240" y1="160" x2="350" y2="220" stroke="#00ff88"
-                                                stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4,4" />
+                                            <circle cx="140" cy="100" r="16" fill="none" stroke="#00ff88" stroke-width="1" stroke-opacity="0.5" />
+                                            <text x="140" y="104" font-size="9" fill="#00ff88" text-anchor="middle" font-family="monospace" opacity="0.8">STUDIO</text>
+                                            <line x1="240" y1="160" x2="140" y2="100" stroke="#00ff88" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4,4" />
+                                            <circle cx="350" cy="100" r="16" fill="none" stroke="#00ff88" stroke-width="1" stroke-opacity="0.5" />
+                                            <text x="350" y="104" font-size="9" fill="#00ff88" text-anchor="middle" font-family="monospace" opacity="0.8">DATA</text>
+                                            <line x1="240" y1="160" x2="350" y2="100" stroke="#00ff88" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4,4" />
+                                            <circle cx="140" cy="220" r="16" fill="none" stroke="#00ff88" stroke-width="1" stroke-opacity="0.5" />
+                                            <text x="140" y="224" font-size="9" fill="#00ff88" text-anchor="middle" font-family="monospace" opacity="0.8">API</text>
+                                            <line x1="240" y1="160" x2="140" y2="220" stroke="#00ff88" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4,4" />
                                             <!-- Label -->
-                                            <text x="240" y="300" font-size="11" fill="#00ff88" text-anchor="middle"
-                                                font-family="monospace" opacity="0.5" letter-spacing="3">CREATOR
-                                                ECOSYSTEM</text>
+                                            <text x="240" y="300" font-size="11" fill="#00ff88" text-anchor="middle" font-family="monospace" opacity="0.5" letter-spacing="3">CREATOR ECOSYSTEM</text>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide 2: Nova AI -->
+
+                        <!-- Slide 2: Study Buddy -->
+                        <div class="swiper-slide">
+                            <div class="case-study-item">
+                                <div class="case-info">
+                                    <span class="case-badge">EDTECH ARCHITECT</span>
+                                    <h3 class="case-title">Study Buddy — AI Learning</h3>
+                                    <p class="case-desc">An intelligent educational platform with real-time code execution, behavior analytics, and adaptive learning paths.</p>
+                                    <div class="case-links">
+                                        <a href="articles/study-buddy-ai-learning-ecosystem.html" class="btn btn-secondary">Explore Case Study →</a>
+                                    </div>
+                                </div>
+                                <div class="case-visual">
+                                    <div class="slide-svg-visual" data-slide="studybuddy">
+                                        <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" class="case-svg">
+                                            <defs>
+                                                <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+                                                    <stop offset="0%" stop-color="#6366f1" stop-opacity="0.15" />
+                                                    <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+                                                </radialGradient>
+                                            </defs>
+                                            <ellipse cx="240" cy="160" rx="180" ry="130" fill="url(#g4)" />
+                                            <!-- Code brackets symbol -->
+                                            <path d="M 180 120 L 140 160 L 180 200" fill="none" stroke="#6366f1" stroke-width="3" stroke-opacity="0.6" />
+                                            <path d="M 300 120 L 340 160 L 300 200" fill="none" stroke="#6366f1" stroke-width="3" stroke-opacity="0.6" />
+                                            <line x1="260" y1="100" x2="220" y2="220" stroke="#6366f1" stroke-width="3" stroke-opacity="0.4" />
+                                            <!-- Floating nodes -->
+                                            <circle cx="240" cy="160" r="40" fill="none" stroke="#6366f1" stroke-width="1" stroke-dasharray="4,4" />
+                                            <circle cx="240" cy="160" r="20" fill="#6366f1" fill-opacity="0.2" />
+                                            <text x="240" y="300" font-size="11" fill="#6366f1" text-anchor="middle" font-family="monospace" opacity="0.5" letter-spacing="3">AI EDUCATION HUB</text>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Nova AI -->
                         <div class="swiper-slide">
                             <div class="case-study-item">
                                 <div class="case-info">
@@ -722,7 +722,7 @@
                                     <h3 class="case-title">NOVA — Intelligent Companion</h3>
                                     <p class="case-desc">A voice-enabled AI assistant with emotional intelligence and
                                         proactive care for users.</p>
-                                    <a href="projects/nova-ai.html" class="btn btn-secondary">View Case Study →</a>
+                                    <a href="articles/nova-ai-intelligent-companion.html" class="btn btn-secondary">Explore Case Study →</a>
                                 </div>
                                 <div class="case-visual">
                                     <div class="slide-svg-visual" data-slide="nova">
@@ -735,52 +735,21 @@
                                             </defs>
                                             <ellipse cx="240" cy="160" rx="180" ry="130" fill="url(#g2)" />
                                             <!-- Waveform bars -->
-                                            <rect x="80" y="130" width="8" height="60" rx="4" fill="#38bdf8"
-                                                opacity="0.4" />
-                                            <rect x="96" y="110" width="8" height="100" rx="4" fill="#38bdf8"
-                                                opacity="0.6" />
-                                            <rect x="112" y="120" width="8" height="80" rx="4" fill="#38bdf8"
-                                                opacity="0.5" />
-                                            <rect x="128" y="100" width="8" height="120" rx="4" fill="#38bdf8"
-                                                opacity="0.7" />
-                                            <rect x="144" y="125" width="8" height="70" rx="4" fill="#38bdf8"
-                                                opacity="0.5" />
-                                            <rect x="160" y="140" width="8" height="40" rx="4" fill="#38bdf8"
-                                                opacity="0.35" />
+                                            <rect x="80" y="130" width="8" height="60" rx="4" fill="#38bdf8" opacity="0.4" />
+                                            <rect x="96" y="110" width="8" height="100" rx="4" fill="#38bdf8" opacity="0.6" />
+                                            <rect x="112" y="120" width="8" height="80" rx="4" fill="#38bdf8" opacity="0.5" />
                                             <!-- Central orb -->
-                                            <circle cx="240" cy="155" r="48" fill="none" stroke="#38bdf8"
-                                                stroke-width="1" stroke-opacity="0.3" />
-                                            <circle cx="240" cy="155" r="34" fill="none" stroke="#38bdf8"
-                                                stroke-width="1.5" stroke-opacity="0.5" />
-                                            <circle cx="240" cy="155" r="20" fill="#38bdf8" fill-opacity="0.15" />
-                                            <text x="240" y="160" font-size="13" fill="#38bdf8" text-anchor="middle"
-                                                font-family="monospace" font-weight="bold">N</text>
-                                            <!-- Waveform bars right -->
-                                            <rect x="296" y="140" width="8" height="40" rx="4" fill="#38bdf8"
-                                                opacity="0.35" />
-                                            <rect x="312" y="125" width="8" height="70" rx="4" fill="#38bdf8"
-                                                opacity="0.5" />
-                                            <rect x="328" y="100" width="8" height="120" rx="4" fill="#38bdf8"
-                                                opacity="0.7" />
-                                            <rect x="344" y="120" width="8" height="80" rx="4" fill="#38bdf8"
-                                                opacity="0.5" />
-                                            <rect x="360" y="110" width="8" height="100" rx="4" fill="#38bdf8"
-                                                opacity="0.6" />
-                                            <rect x="376" y="130" width="8" height="60" rx="4" fill="#38bdf8"
-                                                opacity="0.4" />
-                                            <!-- Status dots -->
-                                            <circle cx="200" cy="260" r="5" fill="#38bdf8" opacity="0.6" />
-                                            <circle cx="240" cy="260" r="5" fill="#38bdf8" opacity="1" />
-                                            <circle cx="280" cy="260" r="5" fill="#38bdf8" opacity="0.6" />
-                                            <text x="240" y="295" font-size="11" fill="#38bdf8" text-anchor="middle"
-                                                font-family="monospace" opacity="0.5" letter-spacing="3">AI
-                                                COMPANION</text>
+                                            <circle cx="240" cy="155" r="48" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3" />
+                                            <circle cx="240" cy="155" r="34" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.5" />
+                                            <text x="240" y="160" font-size="13" fill="#38bdf8" text-anchor="middle" font-family="monospace" font-weight="bold">N</text>
+                                            <text x="240" y="295" font-size="11" fill="#38bdf8" text-anchor="middle" font-family="monospace" opacity="0.5" letter-spacing="3">AI COMPANION</text>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide 3: Jarvis AI -->
+
+                        <!-- Slide 4: Jarvis AI -->
                         <div class="swiper-slide">
                             <div class="case-study-item">
                                 <div class="case-info">
@@ -788,7 +757,7 @@
                                     <h3 class="case-title">JARVIS — Holographic Assistant</h3>
                                     <p class="case-desc">Real-time internet intelligence and autonomous system
                                         automation with a futuristic interface.</p>
-                                    <a href="projects/jarvis-ai.html" class="btn btn-secondary">View Case Study →</a>
+                                    <a href="articles/jarvis-ai-holographic-system.html" class="btn btn-secondary">Explore Case Study →</a>
                                 </div>
                                 <div class="case-visual">
                                     <div class="slide-svg-visual" data-slide="jarvis">
@@ -800,41 +769,41 @@
                                                 </radialGradient>
                                             </defs>
                                             <ellipse cx="240" cy="160" rx="190" ry="135" fill="url(#g3)" />
-                                            <!-- Hexagonal grid -->
-                                            <polygon points="240,80 270,97 270,131 240,148 210,131 210,97" fill="none"
-                                                stroke="#fbbf24" stroke-width="1.2" stroke-opacity="0.6" />
-                                            <polygon points="240,148 270,165 270,199 240,216 210,199 210,165"
-                                                fill="none" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.35" />
-                                            <polygon points="168,80 198,97 198,131 168,148 138,131 138,97" fill="none"
-                                                stroke="#fbbf24" stroke-width="0.8" stroke-opacity="0.25" />
-                                            <polygon points="312,80 342,97 342,131 312,148 282,131 282,97" fill="none"
-                                                stroke="#fbbf24" stroke-width="0.8" stroke-opacity="0.25" />
-                                            <!-- J center -->
-                                            <circle cx="240" cy="114" r="18" fill="#fbbf24" fill-opacity="0.12" />
-                                            <text x="240" y="120" font-size="16" fill="#fbbf24" text-anchor="middle"
-                                                font-family="monospace" font-weight="bold">J</text>
-                                            <!-- Data lines -->
-                                            <line x1="60" y1="160" x2="210" y2="160" stroke="#fbbf24"
-                                                stroke-opacity="0.2" stroke-width="1" stroke-dasharray="6,4" />
-                                            <line x1="270" y1="160" x2="420" y2="160" stroke="#fbbf24"
-                                                stroke-opacity="0.2" stroke-width="1" stroke-dasharray="6,4" />
-                                            <!-- Dots on lines -->
-                                            <circle cx="100" cy="160" r="3" fill="#fbbf24" opacity="0.5" />
-                                            <circle cx="150" cy="160" r="3" fill="#fbbf24" opacity="0.5" />
-                                            <circle cx="330" cy="160" r="3" fill="#fbbf24" opacity="0.5" />
-                                            <circle cx="380" cy="160" r="3" fill="#fbbf24" opacity="0.5" />
-                                            <!-- Bottom HUD -->
-                                            <rect x="140" y="235" width="200" height="28" rx="14" fill="none"
-                                                stroke="#fbbf24" stroke-width="1" stroke-opacity="0.3" />
-                                            <rect x="142" y="237" width="80" height="24" rx="12" fill="#fbbf24"
-                                                fill-opacity="0.1" />
-                                            <text x="182" y="253" font-size="9" fill="#fbbf24" text-anchor="middle"
-                                                font-family="monospace" opacity="0.7">ONLINE</text>
-                                            <text x="290" y="253" font-size="9" fill="#fbbf24" text-anchor="middle"
-                                                font-family="monospace" opacity="0.4">STANDBY</text>
-                                            <text x="240" y="295" font-size="11" fill="#fbbf24" text-anchor="middle"
-                                                font-family="monospace" opacity="0.5" letter-spacing="3">HOLOGRAPHIC
-                                                AI</text>
+                                            <polygon points="240,80 270,97 270,131 240,148 210,131 210,97" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-opacity="0.6" />
+                                            <text x="240" y="120" font-size="16" fill="#fbbf24" text-anchor="middle" font-family="monospace" font-weight="bold">J</text>
+                                            <text x="240" y="295" font-size="11" fill="#fbbf24" text-anchor="middle" font-family="monospace" opacity="0.5" letter-spacing="3">HOLOGRAPHIC AI</text>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5: Sattvahar -->
+                        <div class="swiper-slide">
+                            <div class="case-study-item">
+                                <div class="case-info">
+                                    <span class="case-badge">FULL-STACK ENGINEER</span>
+                                    <h3 class="case-title">Sattvahar — eCommerce</h3>
+                                    <p class="case-desc">A production-grade digital storefront built for high-performance organic commerce and operations management.</p>
+                                    <div class="case-links">
+                                        <a href="articles/sattvahar-full-stack-ecommerce-architecture.html" class="btn btn-secondary">Explore Case Study →</a>
+                                    </div>
+                                </div>
+                                <div class="case-visual">
+                                    <div class="slide-svg-visual" data-slide="sattvahar">
+                                        <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" class="case-svg">
+                                            <defs>
+                                                <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+                                                    <stop offset="0%" stop-color="#10b981" stop-opacity="0.15" />
+                                                    <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+                                                </radialGradient>
+                                            </defs>
+                                            <ellipse cx="240" cy="160" rx="180" ry="130" fill="url(#g5)" />
+                                            <!-- Cart symbol -->
+                                            <path d="M 140 100 L 180 100 L 200 200 L 300 200 L 320 120 L 190 120" fill="none" stroke="#10b981" stroke-width="2" stroke-opacity="0.6" />
+                                            <circle cx="210" cy="230" r="8" fill="#10b981" fill-opacity="0.4" />
+                                            <circle cx="290" cy="230" r="8" fill="#10b981" fill-opacity="0.4" />
+                                            <text x="240" y="300" font-size="11" fill="#10b981" text-anchor="middle" font-family="monospace" opacity="0.5" letter-spacing="3">SSR COMMERCE CORE</text>
                                         </svg>
                                     </div>
                                 </div>
@@ -856,53 +825,7 @@
             </div>
         </section>
 
-        <!-- ==================== ARTICLES ==================== -->
-        <section id="articles" class="articles-section">
-            <div class="container">
-                <div class="section-header centered">
-                    <span class="section-subtitle">TOPICAL AUTHORITY</span>
-                    <h2 class="section-title">Technical Writing</h2>
-                    <p class="section-desc">Deep-dive architectural breakdowns and technical tutorials.</p>
-                </div>
-                <div class="grid-12 articles-grid">
-                    <a href="articles/building-an-esports-platform-with-threejs-and-firebase.html"
-                        class="col-span-6 project-item article-link">
-                        <div class="project-card article-card">
-                            <span class="proj-badge article-badge">TECHNICAL DEEP DIVE</span>
-                            <h3 class="article-title">Building a Real-Time E-Sports Platform with Three.js and Firebase
-                            </h3>
-                            <p class="article-desc">An architectural breakdown of how I built an immersive,
-                                high-performance esports tournament system capable of handling hundreds of concurrent
-                                players.</p>
-                            <span class="proj-cta article-cta">Read Article →</span>
-                        </div>
-                    </a>
-                    <a href="articles/react-firebase-admin-dashboard-architecture.html"
-                        class="col-span-6 project-item article-link">
-                        <div class="project-card article-card">
-                            <span class="proj-badge article-badge">SYSTEM ARCHITECTURE</span>
-                            <h3 class="article-title">Architecting a Highly Scalable React & Firebase Admin Dashboard
-                            </h3>
-                            <p class="article-desc">How I structure React applications and Firebase security rules to
-                                support enterprise-level admin operations and daily active users.</p>
-                            <span class="proj-cta article-cta">Read Article →</span>
-                        </div>
-                    </a>
-                    <a href="articles/scaling-atfro-decentralized-creator-economy.html"
-                        class="col-span-12 project-item article-link">
-                        <div class="project-card article-card">
-                            <span class="proj-badge article-badge">ENGINEERING VISION</span>
-                            <h3 class="article-title">Scaling the Future: The Architecture Behind the Atfro Ecosystem
-                            </h3>
-                            <p class="article-desc">A deep dive into how we are building a decentralized protocol for
-                                creators, focusing on data ownership, scalable analytics, and high-performance system
-                                design.</p>
-                            <span class="proj-cta article-cta">Read Article →</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+
 
         <!-- ==================== PUBLISHED BOOKS ==================== -->
         <section id="books" class="books-section">
@@ -1223,14 +1146,43 @@
                     </div>
 
                 </div>
-
-                <div class="footer-copyright footer-copyright-main">
-                    <p class="footer-copyright-text">&copy; 2026 Sidhant Pande. Built with
-                        Discipline.</p>
-                </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog / Writing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Social</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://x.com/SidhantPande_" target="_blank">Twitter / X</a></li>
+                        <li><a href="https://linkedin.com/in/sidhantpande" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Sidhant185" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sidhant Pande. Architecting Excellence.</p>
+                <div class="footer-socials">
+                    <a href="https://x.com/SidhantPande_" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/sidhantpande" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Sidhant185" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <div class="cursor-diff"></div>
 
