@@ -1,26 +1,28 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // ===== Lenis + GSAP Clean Setup =====
-const lenis = new Lenis({
-    duration: prefersReducedMotion ? 0 : 0.8,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: !prefersReducedMotion,
-    smoothWheel: !prefersReducedMotion,
-    normalizeWheel: !prefersReducedMotion
-});
-
-gsap.registerPlugin(ScrollTrigger);
-
-if (!prefersReducedMotion) {
-    lenis.on("scroll", () => {
-        ScrollTrigger.update();
+let lenis;
+if (typeof Lenis !== 'undefined') {
+    lenis = new Lenis({
+        duration: prefersReducedMotion ? 0 : 0.8,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: !prefersReducedMotion,
+        smoothWheel: !prefersReducedMotion,
+        normalizeWheel: !prefersReducedMotion
     });
 
-    gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
-    });
+    if (!prefersReducedMotion) {
+        lenis.on("scroll", () => {
+            ScrollTrigger.update();
+        });
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+    }
 }
 
+gsap.registerPlugin(ScrollTrigger);
 gsap.ticker.lagSmoothing(0);
 
 // ===== Mobile Menu =====
@@ -67,25 +69,41 @@ if (menuToggle && navLinks) {
 }
 
 // ===== Hero Entrance =====
-const splitHeroTitle = prefersReducedMotion
+const heroTitle = document.querySelector('.hero-title');
+const splitHeroTitle = (prefersReducedMotion || !heroTitle || typeof SplitType === 'undefined')
     ? null
-    : new SplitType('.hero-title', { types: 'lines, words, chars' });
+    : new SplitType(heroTitle, { types: 'lines, words, chars' });
+
 const heroTl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
-if (!prefersReducedMotion && splitHeroTitle) {
-heroTl
-    .from(splitHeroTitle.chars, {
-        y: 80, 
-        opacity: 0, 
-        rotationX: -45,
-        stagger: 0.015, 
-        duration: 1.2, 
-        transformOrigin: "0% 50% -50"
-    })
-    .from('.hero-description', { y: 20, opacity: 0, duration: 1 }, '-=0.8')
-    .from('.hero-actions', { y: 20, opacity: 0, duration: 0.8 }, '-=0.6')
-    .from('.hero-socials', { y: 15, opacity: 0, duration: 0.8 }, '-=0.5')
-    .from('.hero-visual', { scale: 0.95, opacity: 0, duration: 1.2 }, '-=1');
+if (!prefersReducedMotion && heroTitle) {
+    if (splitHeroTitle && splitHeroTitle.chars && splitHeroTitle.chars.length > 0) {
+        heroTl.from(splitHeroTitle.chars, {
+            y: 80, 
+            opacity: 0, 
+            rotationX: -45,
+            stagger: 0.015, 
+            duration: 1.2, 
+            transformOrigin: "0% 50% -50"
+        });
+    }
+
+    const heroDesc = document.querySelector('.hero-description');
+    if (heroDesc) {
+        heroTl.from(heroDesc, { y: 20, opacity: 0, duration: 1 }, '-=0.8');
+    }
+    const heroActions = document.querySelector('.hero-actions');
+    if (heroActions) {
+        heroTl.from(heroActions, { y: 20, opacity: 0, duration: 0.8 }, '-=0.6');
+    }
+    const heroSocials = document.querySelector('.hero-socials');
+    if (heroSocials) {
+        heroTl.from(heroSocials, { y: 15, opacity: 0, duration: 0.8 }, '-=0.5');
+    }
+    const heroVisual = document.querySelector('.hero-visual');
+    if (heroVisual) {
+        heroTl.from(heroVisual, { scale: 0.95, opacity: 0, duration: 1.2 }, '-=1');
+    }
 }
 
 // SplitType sets inline text-align on .line/.word/.char — keep hero centered on mobile/tablet
@@ -342,7 +360,6 @@ const initProjectFilters = () => {
                 projectCards.forEach(card => {
                     if (filter === 'all' || card.getAttribute('data-category') === filter) {
                         card.style.display = 'flex';
-                        gsap.fromTo(card, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 });
                     } else {
                         card.style.display = 'none';
                     }
@@ -354,10 +371,63 @@ const initProjectFilters = () => {
 
 // ===== AI Assistant Logic moved to ai-assistant.js =====
 
+// ===== Interactive Project Cards =====
+const initCardInteractions = () => {
+    const interactiveCards = document.querySelectorAll('.project-card-v2, .case-study-item, .project-card.article-card, .exp-item');
+    
+    interactiveCards.forEach(card => {
+        // Find the primary link inside the card
+        const primaryLink = card.querySelector('a.pc-link, a.btn, a.article-link, a.exp-link-new');
+        
+        if (primaryLink) {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', (e) => {
+                // If the user clicked a link directly, let it be
+                if (e.target.closest('a')) return;
+                
+                // Otherwise, trigger the primary link
+                primaryLink.click();
+            });
+        }
+    });
+};
+
+// ===== Scroll Reveal Animation =====
+function initScrollReveal() {
+    const reveals = document.querySelectorAll('.reveal-up, .reveal-left');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add class for permanent visibility via CSS
+                entry.target.classList.add('is-revealed');
+                
+                // Use GSAP only for a one-time entry effect, no cleanup
+                gsap.fromTo(entry.target, 
+                    { opacity: 0, y: 30 },
+                    { 
+                        opacity: 1, 
+                        y: 0, 
+                        duration: 1.4, 
+                        ease: "expo.out",
+                        delay: entry.target.dataset.delay || 0
+                    }
+                );
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(el => revealObserver.observe(el));
+}
+
 // ===== Initialize All =====
 window.addEventListener("load", () => {
     initSwiper();
     initProjectFilters();
+    initCardInteractions();
+    initBlogAnimations();
+    initScrollReveal();
     ScrollTrigger.refresh();
 });
 
@@ -497,5 +567,28 @@ function initAboutAnimations() {
     });
 }
 
-// Initialize animations
-initAboutAnimations();
+// ===== Blog Page Animations =====
+function initBlogAnimations() {
+    if (!document.querySelector('.blog-page') && !document.querySelector('.projects-page')) return;
+
+    const targets = document.querySelector('.blog-page') ? '.article-link' : '.project-card-v2';
+
+    gsap.from(targets, {
+        opacity: 0,
+        y: 60,
+        scale: 0.9,
+        rotationX: -10,
+        stagger: {
+            amount: 0.8,
+            from: "start"
+        },
+        duration: 1.5,
+        ease: 'expo.out',
+        scrollTrigger: {
+            trigger: document.querySelector('.blog-page') ? '.articles-grid' : '.projects-grid-v2',
+            start: 'top 85%'
+        }
+    });
+}
+
+// Removal of redundant logic
