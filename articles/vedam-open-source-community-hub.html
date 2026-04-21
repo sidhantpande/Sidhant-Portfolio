@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vedam Open Source: The Student Community Hub | Sidhant Pande</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Vedam Open Source: The Student Community Hub",
+      "description": "A high-performance community platform designed to onboard students, showcase projects, and foster open-source collaboration.",
+      "author": {
+        "@type": "Person",
+        "name": "Sidhant Pande"
+      },
+      "datePublished": "2026-01-15"
+    }
+    </script>
+
+    <link rel="canonical" href="https://sidhantpande.in/articles/vedam-open-source-community-hub.html">
+    <meta property="og:site_name" content="Sidhant Pande Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Vedam Open Source: The Student Community Hub | Sidhant Pande">
+    <meta property="og:url" content="https://sidhantpande.in/articles/vedam-open-source-community-hub.html">
+    <meta property="og:image" content="https://sidhantpande.in/profile.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SidhantPande_">
+    <meta name="twitter:creator" content="@SidhantPande_">
+    <meta name="twitter:title" content="Vedam Open Source: The Student Community Hub | Sidhant Pande">
+    <meta name="twitter:image" content="https://sidhantpande.in/profile.webp">
+</head>
+
+<body class="subpage article-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">SIDHANT<span>.</span></a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../index.html#contact" class="nav-btn">Let's Talk</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="article-content">
+            <header class="article-header">
+                <div class="container">
+                    <span class="section-subtitle">COMMUNITY INFRASTRUCTURE</span>
+                    <h1 class="section-title">Vedam Open Source: Building the <span class="gradient-text">Student Hub.</span></h1>
+                    <p class="section-desc-left">The digital face of Vedam's open-source movement, engineered for student onboarding, project discovery, and collaborative growth.</p>
+                </div>
+            </header>
+
+            <section class="article-body">
+                <div class="container">
+                    <div class="grid-12">
+                        <div class="col-span-8">
+                            <div class="content-block">
+                                <h2>The Vision</h2>
+                                <p><span class="dropcap">V</span>edam Open Source was born from a need to centralize the university's developer community. As students, we needed a platform that didn't just list projects but actively encouraged participation. The result is a high-performance hub that bridges the gap between raw code and community engagement.</p>
+                                <blockquote>
+                                    "Open source is about more than just code; it's about building a sustainable ecosystem of learners and contributors."
+                                </blockquote>
+                            </div>
+
+                            <div class="callout callout-info">
+                                <div class="callout-icon"><i class="fas fa-users"></i></div>
+                                <div class="callout-content">
+                                    <h4>Community Onboarding</h4>
+                                    <p>The platform features a custom onboarding flow that syncs student profiles directly with the central organization dashboard via Firebase, streamlining the membership process.</p>
+                                </div>
+                            </div>
+
+                            <div class="content-block">
+                                <h2>Architecture & Flow</h2>
+                                <p>The system is designed to be lightweight yet extensible, leveraging a static frontend for performance and Firebase for real-time community data.</p>
+
+                                <div class="flowchart-container">
+                                    <svg viewBox="0 0 600 200" class="flow-svg">
+                                        <defs>
+                                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                                                <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-muted)" />
+                                            </marker>
+                                        </defs>
+                                        <!-- Node 1 -->
+                                        <rect x="20" y="70" width="100" height="60" rx="5" class="flow-node" />
+                                        <text x="70" y="105" text-anchor="middle" class="flow-text" style="font-size: 10px;">VISITOR</text>
+                                        <line x1="120" y1="100" x2="160" y2="100" class="flow-arrow" />
+
+                                        <!-- Node 2 -->
+                                        <rect x="160" y="70" width="100" height="60" rx="5" class="flow-node" />
+                                        <text x="210" y="105" text-anchor="middle" class="flow-text" style="font-size: 10px;">DISCOVERY</text>
+                                        <line x1="260" y1="100" x2="300" y2="100" class="flow-arrow" />
+
+                                        <!-- Node 3 -->
+                                        <rect x="300" y="70" width="100" height="60" rx="5" class="flow-node" />
+                                        <text x="350" y="105" text-anchor="middle" class="flow-text" style="font-size: 10px;">ONBOARDING</text>
+                                        <line x1="400" y1="100" x2="440" y2="100" class="flow-arrow" />
+
+                                        <!-- Node 4 -->
+                                        <rect x="440" y="70" width="120" height="60" rx="5" class="flow-node" />
+                                        <text x="500" y="105" text-anchor="middle" class="flow-text" style="font-size: 10px;">CONTRIBUTOR</text>
+                                    </svg>
+                                </div>
+                                
+                                <h3>Key Infrastructure</h3>
+                                <ul>
+                                    <li><strong>Firebase Integration:</strong> Real-time project tracking and member directory synchronization.</li>
+                                    <li><strong>Mobile-First UI:</strong> A responsive design language optimized for campus-wide accessibility.</li>
+                                    <li><strong>Project Showcase:</strong> A dynamic portfolio section highlighting top student contributions and GSOC successes.</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-block">
+                                <h2>Outcome & Impact</h2>
+                                <p>Since its launch, the Vedam Open Source website has served as the primary entry point for hundreds of students. It has successfully centralized project resources and provided a professional public face for the university's technical community, directly contributing to an increase in organization-wide project velocity.</p>
+                            </div>
+
+                            <div style="margin-top: 5rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                                <a href="../blog.html" class="back-link">← Return to Blog</a>
+                            </div>
+                        </div>
+
+                        <aside class="col-span-4 article-sidebar">
+                            <div class="sidebar-card glass">
+                                <h3>Project Context</h3>
+                                <ul class="clean-list">
+                                    <li><strong>Category:</strong> Open Source / Community</li>
+                                    <li><strong>Lead:</strong> Sidhant Pande</li>
+                                    <li><strong>Stack:</strong> JS, Firebase, Netlify</li>
+                                    <li><strong>Status:</strong> Active Hub</li>
+                                </ul>
+                            </div>
+
+                            <div class="sidebar-card glass">
+                                <h3>Project Assets</h3>
+                                <div class="sidebar-links">
+                                    <a href="https://github.com/vstopensource-gif/Vedam-OpenSource-Website" target="_blank" class="sidebar-link-item">
+                                        <i class="fab fa-github"></i>
+                                        <span>Main Website</span>
+                                    </a>
+                                    <a href="https://github.com/vstopensource-gif/Vedam-OpenSource-Admin" target="_blank" class="sidebar-link-item">
+                                        <i class="fab fa-github"></i>
+                                        <span>Admin System</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cta-block reveal-up">
+                <h2 class="footer-cta-title">Have a project in <span class="gradient-text">mind?</span></h2>
+                <p class="footer-cta-desc">I am currently accepting new projects and consulting engagements. Let's build something exceptional together.</p>
+                <a href="../index.html#contact" class="btn btn-primary">Start A Conversation <i class="fas fa-paper-plane"></i></a>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../blog.html">Blog / Writing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Social</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://x.com/SidhantPande_" target="_blank">Twitter / X</a></li>
+                        <li><a href="https://linkedin.com/in/sidhantpande" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Sidhant185" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sidhant Pande. Architecting Excellence.</p>
+                <div class="footer-socials">
+                    <a href="https://x.com/SidhantPande_" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/sidhantpande" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Sidhant185" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
