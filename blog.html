@@ -29,15 +29,49 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Sidhant Pande's Technical Blog",
-      "description": "Deep-dive architectural breakdowns and technical tutorials on high-performance web systems.",
-      "url": "https://sidhantpande.in/blog.html",
-      "author": {
-        "@type": "Person",
-        "name": "Sidhant Pande",
-        "jobTitle": "Systems Architect & Founder"
-      }
+      "@graph": [
+        {
+          "@type": "Blog",
+          "@id": "https://sidhantpande.in/blog.html#website",
+          "name": "Sidhant Pande's Technical Blog",
+          "description": "Deep-dive architectural breakdowns and technical tutorials on high-performance web systems.",
+          "url": "https://sidhantpande.in/blog.html",
+          "publisher": { "@id": "https://sidhantpande.in/#person" },
+          "breadcrumb": { "@id": "https://sidhantpande.in/blog.html#breadcrumb" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://sidhantpande.in/#person",
+          "name": "Sidhant Pande",
+          "jobTitle": "CEO & Systems Architect",
+          "url": "https://sidhantpande.in",
+          "image": "https://sidhantpande.in/profile.webp",
+          "sameAs": [
+            "https://github.com/Sidhant185",
+            "https://linkedin.com/in/sidhantpande",
+            "https://x.com/SidhantPande_",
+            "https://instagram.com/sidhantpande.in"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://sidhantpande.in/blog.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://sidhantpande.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://sidhantpande.in/blog.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -45,13 +79,13 @@
 <body class="subpage blog-page">
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">SIDHANT<span>.</span></a>
+            <a href="/" class="logo">SIDHANT<span>.</span></a>
             <div class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="/">Home</a>
                 <a href="about.html">About</a>
                 <a href="projects.html">Projects</a>
                 <a href="blog.html" class="active">Blog</a>
-                <a href="index.html#contact" class="nav-btn">Let's Talk</a>
+                <a href="/#contact" class="nav-btn">Let's Talk</a>
             </div>
         </div>
     </nav>
@@ -260,14 +294,14 @@
             <div class="footer-cta-block reveal-up">
                 <h2 class="footer-cta-title">Have a project in <span class="gradient-text">mind?</span></h2>
                 <p class="footer-cta-desc">I am currently accepting new projects and consulting engagements. Let's build something exceptional together.</p>
-                <a href="index.html#contact" class="btn btn-primary">Start A Conversation <i class="fas fa-paper-plane"></i></a>
+                <a href="/#contact" class="btn btn-primary">Start A Conversation <i class="fas fa-paper-plane"></i></a>
             </div>
 
             <div class="footer-links-grid">
                 <div class="footer-col">
                     <h4 class="footer-heading">Navigation</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="blog.html">Blog / Writing</a></li>

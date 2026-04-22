@@ -6,8 +6,7 @@ Allow: /script.js
 Disallow: /private/
 Disallow: /tmp/
 
-# Host and Sitemap
-Host: https://sidhantpande.in
+# Sitemap
 Sitemap: https://sidhantpande.in/sitemap.xml
 
 # AI Crawler Support
