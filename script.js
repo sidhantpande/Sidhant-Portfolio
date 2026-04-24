@@ -106,7 +106,7 @@ if (!prefersReducedMotion && heroTitle) {
     }
 }
 
-// SplitType sets inline text-align on .line/.word/.char — keep hero centered on mobile/tablet
+// SplitType sets inline text-align on .line/.word/.char : keep hero centered on mobile/tablet
 function syncHeroTitleAlignment() {
     const narrow = window.matchMedia('(max-width: 992px)').matches;
     const title = document.querySelector('.hero-title');
@@ -303,7 +303,7 @@ document.addEventListener('keydown', (e) => {
             modal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
         });
-        if (!prefersReducedMotion) lenis.start(); // JS-1 FIX — moved outside loop so it only runs once
+        if (!prefersReducedMotion) lenis.start(); // JS-1 FIX : moved outside loop so it only runs once
         if (openModal.lastFocused && openModal.lastFocused instanceof HTMLElement) {
             openModal.lastFocused.focus();
         }
