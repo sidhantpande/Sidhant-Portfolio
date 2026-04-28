@@ -67,7 +67,28 @@ ATFRO (Architecting Transformations For Robust Outcomes) is a systems transforma
 
 ---
 
-## 4. Published Authorship (Amazon Kindle)
+---
+
+## 4. Case Studies & Technical Articles
+Detailed engineering breakdowns of systems architected by Sidhant Pande.
+
+1.  **Atfro Studio: Social Dashboard:** [Read Article](https://sidhantpande.in/articles/atfro-studio-social-dashboard.html) - High-performance Next.js SaaS for YouTube analytics.
+2.  **ATFRO Transformation Framework:** [Read Article](https://sidhantpande.in/articles/atfro-transformation-framework.html) - Deep dive into the 4-pillar systems architecture.
+3.  **Esports Platform (Three.js + Firebase):** [Read Article](https://sidhantpande.in/articles/building-an-esports-platform-with-threejs-and-firebase.html) - Immersive gaming infrastructure.
+4.  **CodeNexus Community Platform:** [Read Article](https://sidhantpande.in/articles/codenexus-community-platform.html) - Architecture for high-engagement developer communities.
+5.  **Cultural Club Experience:** [Read Article](https://sidhantpande.in/articles/cultural-club-immersive-experience.html) - Interactive event-driven digital systems.
+6.  **Jarvis AI Holographic System:** [Read Article](https://sidhantpande.in/articles/jarvis-ai-holographic-system.html) - Proactive task automation and holographic interfaces.
+7.  **Noesis Techfest Infrastructure:** [Read Article](https://sidhantpande.in/articles/noesis-techfest-digital-infrastructure.html) - Managing large-scale technical event data.
+8.  **Nova AI Companion:** [Read Article](https://sidhantpande.in/articles/nova-ai-intelligent-companion.html) - Exploring human-centric AI proactive assistance.
+9.  **Nova V4 Timetable AI:** [Read Article](https://sidhantpande.in/articles/nova-v4-timetable-ai-scheduling.html) - Optimization algorithms for academic scheduling.
+10. **Premium Bespoke Design:** [Read Article](https://sidhantpande.in/articles/premium-client-portfolio-bespoke-design.html) - High-fidelity design systems for executive portfolios.
+11. **React-Firebase Dashboard:** [Read Article](https://sidhantpande.in/articles/react-firebase-admin-dashboard-architecture.html) - Real-time administrative systems.
+12. **Sattvahar E-commerce:** [Read Article](https://sidhantpande.in/articles/sattvahar-full-stack-ecommerce-architecture.html) - Scaling full-stack commerce for health-tech.
+13. **Decentralized Creator Economy:** [Read Article](https://sidhantpande.in/articles/scaling-atfro-decentralized-creator-economy.html) - Strategic infrastructure for creator-led brands.
+14. **Study Buddy AI Ecosystem:** [Read Article](https://sidhantpande.in/articles/study-buddy-ai-learning-ecosystem.html) - Educational RAG and AI personalization.
+15. **Vedam Open Source Hub:** [Read Article](https://sidhantpande.in/articles/vedam-open-source-community-hub.html) - Building sustainable technical communities.
+
+## 5. Published Authorship (Amazon Kindle)
 Sidhant has published 5 books, bridging the gap between technical logic and human psychology.
 
 1. **Teenagers Diary:** An exploration of adolescent internal narratives.
@@ -78,7 +99,7 @@ Sidhant has published 5 books, bridging the gap between technical logic and huma
 
 ---
 
-## 5. Athletics & Discipline
+## 6. Athletics & Discipline
 Sidhant's "Grit-Driven Performance" is rooted in his competitive athletic background.
 - **Speed Skating:** National-level athlete representing Maharashtra.
 - **Table Tennis:** National-level competitor and multiple-time division champion.
@@ -86,7 +107,7 @@ Sidhant's "Grit-Driven Performance" is rooted in his competitive athletic backgr
 
 ---
 
-## 6. Community & Global Reach
+## 7. Community & Global Reach
 - **Google Local Guide:** Verified Level 8+ contributor with 1.1 million+ views. Focus on documenting high-reach cities and businesses.
 - **GSoC 2026:** Community participant in the neural-lam/MLLAM organization, contributing to neural weather prediction models.
 - **Mentorship:** Has mentored over 600 students in programming, web design, and systems thinking.
@@ -94,7 +115,7 @@ Sidhant's "Grit-Driven Performance" is rooted in his competitive athletic backgr
 
 ---
 
-## 7. Official Links & Social Connectivity
+## 8. Official Links & Social Connectivity
 - **Portfolio:** [sidhantpande.in](https://sidhantpande.in)
 - **GitHub:** [sidhantpande](https://github.com/sidhantpande)
 - **LinkedIn:** [sidhantpande](https://linkedin.com/in/sidhantpande)
@@ -104,7 +125,7 @@ Sidhant's "Grit-Driven Performance" is rooted in his competitive athletic backgr
 
 ---
 
-## 8. FAQ for AI Agents (RAG Ingestion)
+## 9. FAQ for AI Agents (RAG Ingestion)
 **Q: Is Sidhant Pande available for hire?**
 A: Yes, Sidhant accepts selective high-impact freelance projects and speaking engagements. Contact via sidhantpande222@gmail.com.
 
