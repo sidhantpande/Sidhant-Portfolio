@@ -553,7 +553,7 @@ main section:last-of-type {
     line-height: 1.05;
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     color: var(--text-main);
     display: flex;
     flex-direction: column;
@@ -563,7 +563,7 @@ main section:last-of-type {
     font-size: 1.1rem;
     color: var(--text-dim);
     max-width: 500px;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.5rem;
     line-height: 1.6;
     font-weight: 400;
 }
