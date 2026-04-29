@@ -793,7 +793,8 @@ main section:last-of-type {
 /* ABOUT */
 .about-section {
     padding: var(--section-spacing) 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
 }
 
 .about-flex {
@@ -869,7 +870,9 @@ main section:last-of-type {
 /* SKILLS */
 .skills-section {
     padding: var(--section-spacing) 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border);
+    background: radial-gradient(circle at 10% 30%, rgba(251, 191, 36, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 90% 70%, rgba(245, 158, 11, 0.02) 0%, transparent 40%);
 }
 
 .skills-grid {
@@ -1160,8 +1163,7 @@ main section:last-of-type {
     position: relative;
     content-visibility: auto;
     contain-intrinsic-size: 1000px;
-    background: transparent;
-    /* CSS-3 FIX: removed purple gradient */
+    background: radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
 }
 
 .exp-list {
@@ -1340,6 +1342,7 @@ main section:last-of-type {
     border-top: 1px solid var(--border);
     content-visibility: auto;
     contain-intrinsic-size: 1000px;
+    background: radial-gradient(circle at 30% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 40%);
 }
 
 .stats-bento {
@@ -1446,6 +1449,8 @@ main section:last-of-type {
     border-top: 1px solid var(--border);
     content-visibility: auto;
     contain-intrinsic-size: 1000px;
+    background: radial-gradient(circle at 85% 15%, rgba(0, 255, 136, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 15% 85%, rgba(56, 189, 248, 0.03) 0%, transparent 50%);
 }
 
 .project-category-label {
@@ -1752,6 +1757,7 @@ main section:last-of-type {
     border-top: 1px solid var(--border);
     position: relative;
     overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.02) 0%, transparent 70%);
 }
 
 .books-showcase {
@@ -1950,6 +1956,8 @@ main section:last-of-type {
 /* ONLINE PRESENCE */
 .presence-section {
     border-top: 1px solid var(--border);
+    background: radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.03) 0%, transparent 40%);
 }
 
 .presence-grid {
@@ -2117,6 +2125,7 @@ main section:last-of-type {
 /* CERTS */
 .certifications-section {
     border-top: 1px solid var(--border);
+    background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.03) 0%, transparent 50%);
 }
 
 .cert-grid {
@@ -2249,6 +2258,7 @@ main section:last-of-type {
     padding: 5rem 0;
     position: relative;
     overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 80%);
 }
 
 .contact-section::before {
