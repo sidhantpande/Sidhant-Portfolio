@@ -1444,9 +1444,9 @@ main section:last-of-type {
 }
 
 .project-card:hover {
-    border-color: var(--border-hover);
-    padding-left: 1rem;
-    transform: none;
+    border-color: var(--accent);
+    padding-left: 2rem;
+    background: linear-gradient(90deg, rgba(0, 255, 136, 0.02) 0%, transparent 100%);
 }
 
 .project-overlay {
