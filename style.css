@@ -5601,3 +5601,14 @@ section.archive-filters {
     border: 0 !important;
 }
 
+
+@media (max-width: 768px) {
+    .different-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .diff-card {
+        padding: 2.5rem;
+    }
+}
