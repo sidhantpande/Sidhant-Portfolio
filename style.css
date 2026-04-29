@@ -101,9 +101,9 @@ body::before {
 }
 
 .container {
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 clamp(2rem, 10vw, 8rem);
     width: 100%;
 }
 
