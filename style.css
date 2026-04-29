@@ -437,7 +437,7 @@ main section:last-of-type {
 .grid-12 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 2rem;
+    gap: 3.5rem;
 }
 
 .col-span-3 {
