@@ -44,7 +44,7 @@
 }
 
 html {
-    font-size: 90%;
+    font-size: 100%;
     scroll-behavior: initial;
     scrollbar-width: thin;
     scrollbar-color: var(--primary) var(--bg-dark);
