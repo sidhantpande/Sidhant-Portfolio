@@ -531,7 +531,8 @@ main section:last-of-type {
     position: relative;
     padding: 140px 0 80px;
     background: var(--bg-dark);
-    /* Ensure solid background for contrast */
+    background: radial-gradient(circle at 70% 30%, rgba(0, 255, 136, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(56, 189, 248, 0.03) 0%, transparent 40%);
 }
 
 .hero-wrapper {
