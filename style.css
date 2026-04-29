@@ -481,7 +481,7 @@ main section:last-of-type {
 }
 
 .section-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 4.5rem;
 }
 
 .section-header.centered {
@@ -1886,7 +1886,7 @@ main section:last-of-type {
 .article-desc {
     color: var(--text-dim);
     line-height: 1.7;
-    margin-bottom: 2.5rem;
+    .section-header { margin-bottom: 4.5rem; }
     font-size: 1.05rem;
 }
 
@@ -2146,7 +2146,7 @@ main section:last-of-type {
     width: 50%;
     padding: 1.5rem;
     position: relative;
-    margin-bottom: 2.5rem;
+    .section-header { margin-bottom: 4.5rem; }
 }
 
 .timeline-event:nth-child(even) {
@@ -2474,7 +2474,7 @@ main section:last-of-type {
     }
 
     .section-header {
-        margin-bottom: 2.5rem;
+        .section-header { margin-bottom: 4.5rem; }
     }
 
     .books-showcase {
@@ -4132,7 +4132,7 @@ section,
 .project-card-v2 p {
     font-size: 1.05rem;
     color: var(--text-dim);
-    margin-bottom: 2.5rem;
+    .section-header { margin-bottom: 4.5rem; }
     line-height: 1.6;
 }
 
@@ -4168,7 +4168,7 @@ section,
 .article-desc {
     font-size: 1.1rem;
     color: var(--text-dim);
-    margin-bottom: 2.5rem;
+    .section-header { margin-bottom: 4.5rem; }
     line-height: 1.8;
     flex-grow: 1;
 }
@@ -4648,7 +4648,7 @@ section.archive-filters {
     font-size: 1.25rem;
     line-height: 1.9;
     color: var(--text-dim);
-    margin-bottom: 2.5rem;
+    .section-header { margin-bottom: 4.5rem; }
     max-width: 90%;
 }
 
