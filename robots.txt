@@ -54,3 +54,4 @@ Allow: /
 
 # Sitemap
 Sitemap: https://sidhantpande.in/sitemap.xml
+Sitemap: https://sidhantpande.in/llms.txt

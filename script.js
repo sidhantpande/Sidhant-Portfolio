@@ -125,7 +125,7 @@ const splitInstances = [];
 const sectionTitles = document.querySelectorAll('.section-title');
 
 function initSplitAnimations() {
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion || typeof SplitType === 'undefined') return;
     // Revert existing instances before re-splitting
     splitInstances.forEach(s => s.revert());
     splitInstances.length = 0;
@@ -373,11 +373,11 @@ const initProjectFilters = () => {
 
 // ===== Interactive Project Cards =====
 const initCardInteractions = () => {
-    const interactiveCards = document.querySelectorAll('.project-card-v2, .case-study-item, .project-card.article-card, .exp-item');
+    const interactiveCards = document.querySelectorAll('.project-card-v2, .case-study-item, .project-card.article-card, .exp-item, .news-grid-card, .featured-news-card');
     
     interactiveCards.forEach(card => {
         // Find the primary link inside the card
-        const primaryLink = card.querySelector('a.pc-link, a.btn, a.article-link, a.exp-link-new');
+        const primaryLink = card.querySelector('a.pc-link, a.btn, a.article-link, a.exp-link-new, a.news-card-link');
         
         if (primaryLink) {
             card.style.cursor = 'pointer';
@@ -481,7 +481,7 @@ document.addEventListener('visibilitychange', () => {
 });
 
 // Hover states for the cursor
-const interactiveElements = document.querySelectorAll('a, button, .project-card, .btn, .nav-btn, .exp-item');
+const interactiveElements = document.querySelectorAll('a, button, .project-card, .btn, .nav-btn, .exp-item, .news-grid-card, .featured-news-card');
 
 interactiveElements.forEach(el => {
     el.addEventListener('mouseenter', () => {
@@ -519,6 +519,22 @@ if (bttButton) {
             lenis.scrollTo(0);
         } else {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+}
+
+// ===== Smooth Scroll to News Presence Section =====
+const scrollToNewsBtn = document.querySelector('.scroll-to-news');
+if (scrollToNewsBtn) {
+    scrollToNewsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetSection = document.querySelector('#news-presence');
+        if (targetSection) {
+            if (!prefersReducedMotion && typeof lenis !== 'undefined') {
+                lenis.scrollTo(targetSection);
+            } else {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 }

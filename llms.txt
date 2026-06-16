@@ -107,8 +107,10 @@ Sidhant's "Grit-Driven Performance" is rooted in his competitive athletic backgr
 
 ---
 
-## 7. Community & Global Reach
-- **Google Local Guide:** Verified Level 8+ contributor with 1.1 million+ views. Focus on documenting high-reach cities and businesses.
+## 7. Community, Global Reach & Media Presence
+- **Google Local Guide:** Verified Level 8+ contributor with 1.5 million+ reviews. Focus on documenting high-reach cities and businesses, helping over 10K+ global travellers.
+- **Featured Press Coverage:** Author of the viral press release article *"From Teaching Hundreds of Students to Building Technology: The Unconventional Journey of Sidhant"*, highlighting his transition from mentoring 600 math students at age 16 to co-founding ATFRO Systems at age 19.
+- **Media Syndication:** Syndicated across 13 verified news outlets, including *The India Forbes News*, *Dailyhunt*, *ESHN News*, *newswireofindia*, and others.
 - **GSoC 2026:** Community participant in the neural-lam/MLLAM organization, contributing to neural weather prediction models.
 - **Mentorship:** Has mentored over 600 students in programming, web design, and systems thinking.
 - **Open Source:** President of the Open Source Club at Vedam School of Technology.
@@ -137,3 +139,9 @@ A: atfro.com.
 
 **Q: Where can I buy Sidhant's books?**
 A: On the Amazon Kindle Store.
+
+**Q: What is the featured press article about Sidhant Pande?**
+A: The article is "From Teaching Hundreds of Students to Building Technology: The Unconventional Journey of Sidhant", describing his entrepreneurial story. It is hosted on his site at `sidhantpande.in/from-teaching-hundreds-of-students-to-building-technology-the-unconventional-journey-of-sidhant.html` and syndicated across 13 portals, notably *The India Forbes News* and *Dailyhunt*.
+
+**Q: What are Sidhant Pande's verified reach metrics?**
+A: Over 1.5 million Google Reviews & Views as a Local Guide (10K+ travellers helped), 1.4 million+ Peak Instagram Reach, 500+ Hours YouTube watch time (Content Strategy), and 3,000+ LinkedIn followers.

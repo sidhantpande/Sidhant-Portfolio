@@ -73,7 +73,10 @@
         "https://linkedin.com/in/sidhantpande",
         "https://x.com/SidhantPande_",
         "https://www.instagram.com/sidhantpande.in/",
-        "https://www.instagram.com/sidhantpande_/"
+        "https://www.instagram.com/sidhantpande_/",
+        "https://www.amazon.com/author/sidhantpande",
+        "https://www.wikidata.org/wiki/Q115862351",
+        "https://www.crunchbase.com/person/sidhant-pande"
       ]
     },
     {
@@ -325,7 +328,10 @@
         "https://linkedin.com/in/sidhantpande",
         "https://x.com/SidhantPande_",
         "https://www.instagram.com/sidhantpande.in/",
-        "https://www.instagram.com/sidhantpande_/"
+        "https://www.instagram.com/sidhantpande_/",
+        "https://www.amazon.com/author/sidhantpande",
+        "https://www.wikidata.org/wiki/Q115862351",
+        "https://www.crunchbase.com/person/sidhant-pande"
       ]
     },
     {
@@ -510,7 +516,17 @@
       "@id": "https://sidhantpande.in/#person",
       "name": "Sidhant Pande",
       "url": "https://sidhantpande.in/",
-      "jobTitle": "CEO & Systems Architect"
+      "jobTitle": "CEO & Systems Architect",
+      "sameAs": [
+        "https://github.com/sidhantpande",
+        "https://linkedin.com/in/sidhantpande",
+        "https://x.com/SidhantPande_",
+        "https://www.instagram.com/sidhantpande.in/",
+        "https://www.instagram.com/sidhantpande_/",
+        "https://www.amazon.com/author/sidhantpande",
+        "https://www.wikidata.org/wiki/Q115862351",
+        "https://www.crunchbase.com/person/sidhant-pande"
+      ]
     },
     {
       "@type": "Organization",
@@ -553,6 +569,35 @@
     }
   ]
 }
+    </script>
+    <!-- Speculative Loading for Instant Navigation (AEO/SEO) -->
+    <script type="speculationrules">
+    {
+      "prefetch": [
+        {
+          "where": {
+            "and": [
+              { "href_matches": "/*" },
+              { "not": { "href_matches": "/*\\?*" } },
+              { "not": { "selector_matches": ".no-prefetch" } }
+            ]
+          },
+          "eagerness": "moderate"
+        }
+      ],
+      "prerender": [
+        {
+          "where": {
+            "and": [
+              { "href_matches": "/*" },
+              { "not": { "href_matches": "/*\\?*" } },
+              { "not": { "selector_matches": ".no-prerender" } }
+            ]
+          },
+          "eagerness": "conservative"
+        }
+      ]
+    }
     </script>
 </head>
 
@@ -853,7 +898,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="../script.js"></script>
 
-    <div class="visually-hidden" aria-hidden="true" style="display:none;">
+    <div class="visually-hidden" aria-hidden="true">
         <section>
             <h2>Semantic Data for ATFRO: Architecting Transformations For Robust Outcomes.</h2>
             <p>The Brand That Builds Brands : A deep dive into the service-based transformation architecture.</p>

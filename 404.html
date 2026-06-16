@@ -61,6 +61,35 @@
             opacity: 0.3;
         }
     </style>
+    <!-- Speculative Loading for Instant Navigation (AEO/SEO) -->
+    <script type="speculationrules">
+    {
+      "prefetch": [
+        {
+          "where": {
+            "and": [
+              { "href_matches": "/*" },
+              { "not": { "href_matches": "/*\\?*" } },
+              { "not": { "selector_matches": ".no-prefetch" } }
+            ]
+          },
+          "eagerness": "moderate"
+        }
+      ],
+      "prerender": [
+        {
+          "where": {
+            "and": [
+              { "href_matches": "/*" },
+              { "not": { "href_matches": "/*\\?*" } },
+              { "not": { "selector_matches": ".no-prerender" } }
+            ]
+          },
+          "eagerness": "conservative"
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="error-page">
     <div class="error-code">404</div>
