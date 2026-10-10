@@ -1,6 +1,6 @@
 # Sidhant Pande's Premium Digital Portfolio 🚀
 
-> **A cutting-edge, high-converting Full-Stack Developer portfolio built with premium glassmorphism aesthetics, advanced layout systems, and ultra-smooth micro-interactions.**
+> **Official portfolio of Sidhant Pande — Systems Architect, CEO of ATFRO Systems, and Co-Founder & Head of Business at NioLearn. Built with premium editorial aesthetics, advanced glassmorphism layout systems, and ultra-smooth micro-interactions.**
 
 ## ✨ The Edge
 
