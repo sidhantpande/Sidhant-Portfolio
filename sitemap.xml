@@ -2,27 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sidhantpande.in/</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://sidhantpande.in/about.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sidhantpande.in/projects.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://sidhantpande.in/blog.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sidhantpande.in/articles/why-we-are-building-niolearn.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sidhantpande.in/from-teaching-hundreds-of-students-to-building-technology-the-unconventional-journey-of-sidhant.html</loc>
@@ -122,7 +128,7 @@
   </url>
   <url>
     <loc>https://sidhantpande.in/llms.txt</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
